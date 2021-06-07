@@ -25,7 +25,6 @@ public class TestLabyrinthe {
 		longueur = tab.length;
 		
 		assertEquals("Le labyrinthe devrait avoir une longueur de 16", 16, longueur);
-		
 	}
 	
 	
