@@ -3,7 +3,7 @@ title Ajout d'un labyrinthe de 16*16
 class Labyrinthe{
   -labyrinthe:int[16][16]
   +Labyrinthe()
-  +getEmplacement(int x, int y):void
+  +getEmplacement(int x, int y):int
   +getLabyrinthe():int[16][16]
 }
 
