@@ -27,8 +27,4 @@ public class TestLabyrinthe {
 		assertEquals("Le labyrinthe devrait avoir une longueur de 16", 16, longueur);
 	}
 	
-	
-	
-	
-
 }

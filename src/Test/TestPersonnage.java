@@ -7,8 +7,8 @@ import org.junit.Test;
 public class TestPersonnage {
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void testDeplacementPersonnage() {
+		
 	}
 
 }
