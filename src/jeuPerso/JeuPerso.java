@@ -37,7 +37,7 @@ public class JeuPerso implements Jeu {
 
 	/**
 	 * demande a deplacer le personnage
-	 * 
+	 *
 	 * @param commande
 	 *            chaine qui donne ordre
 	 */
@@ -54,7 +54,7 @@ public class JeuPerso implements Jeu {
 
 	/**
 	 * getter pour l'affichage
-	 * 
+	 *
 	 * @return personnage du jeu
 	 */
 	public Personnage getPj() {
@@ -63,7 +63,7 @@ public class JeuPerso implements Jeu {
 
 	/**
 	 * getter pour le labyrinthe
-	 * 
+	 *
 	 * @return le labyrinthe du jeu
 	 */
 	public static Labyrinthe getLabyrinthe() {

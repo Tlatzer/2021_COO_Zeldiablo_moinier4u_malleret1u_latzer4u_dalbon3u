@@ -13,6 +13,8 @@ public class Personnage {
 	public int x;
 	public int y;
 
+	public Labyrinthe lab;
+
 	/**
 	 * taille de l'environnement
 	 */
@@ -25,6 +27,7 @@ public class Personnage {
 	public Personnage() {
 		this.x = LIMIT_X / 2;
 		this.y = LIMIT_Y / 2;
+		this.lab = new Labyrinthe();
 	}
 
 	/**
@@ -36,14 +39,14 @@ public class Personnage {
 	public void deplacer(Commande c) {
 
 		if (c.gauche) {
-			this.x--;
+			if(lab.getEmplacement(this.x-1,this.y)==0) this.x--;
 			if (this.x < 0) {
 				this.x = 0;
 			}
 		}
 
 		if (c.droite) {
-			this.x++;
+			if(lab.getEmplacement(this.x+1,this.y)==0) this.x++;
 			if (this.x >LIMIT_X) {
 				this.x = LIMIT_X;
 			}
@@ -51,14 +54,14 @@ public class Personnage {
 		}
 
 		if (c.bas) {
-			this.y++;
+			if(lab.getEmplacement(this.x,this.y+1)==0) this.y++;
 			if (this.y >LIMIT_Y) {
 				this.y = LIMIT_Y;
 			}
 		}
 
 		if (c.haut) {
-			this.y--;
+			if(lab.getEmplacement(this.x,this.y-1)==0) this.y--;
 			if (this.y < 0) {
 				this.y = 0;
 			}
