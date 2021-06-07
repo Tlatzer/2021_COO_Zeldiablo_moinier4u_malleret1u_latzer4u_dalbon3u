@@ -13,7 +13,7 @@ public class JeuPerso implements Jeu {
 	/**
 	 * le personnage du jeu
 	 */
-	private Personnage pj;
+	private static Personnage pj;
 
 
 	/**
@@ -52,8 +52,8 @@ public class JeuPerso implements Jeu {
 	 *
 	 * @return personnage du jeu
 	 */
-	public Personnage getPj() {
-		return this.pj;
+	public static Personnage getPj() {
+		return pj;
 	}
 
 	/**
