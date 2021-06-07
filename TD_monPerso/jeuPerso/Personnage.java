@@ -1,3 +1,5 @@
+package jeuPerso;
+
 import moteurJeu.Commande;
 
 /**
