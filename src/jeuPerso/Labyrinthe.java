@@ -42,9 +42,14 @@ public class Labyrinthe {
 	 *  - 1 mur  
 	 */
 	public int getEmplacement(int x, int y) {
-		if(this.labyrinthe[x][y] == 0) {
-			
-		}
+		int res = 0;
+		if(this.labyrinthe[x][y] == 0)
+			res= 0;
+		
+		if(this.labyrinthe[x][y] == 1)
+			res = 1;
+		
+		return res;
 	}
 	
 	
