@@ -62,9 +62,9 @@ public class DessinPerso implements DessinJeu {
 		Personnage pj = jeu.getPj();
 
 
-		for (int i=0;i<jeu.getLabyrinthe().getTaille()-1;i++) {
+		for (int i=0;i<jeu.getLabyrinthe().getTaille();i++) {
 
-			for (int j=0;j<jeu.getLabyrinthe().getTaille()-1;j++) {
+			for (int j=0;j<jeu.getLabyrinthe().getTaille();j++) {
 
 				if (jeu.getLabyrinthe().getEmplacement(i,j)==1 ) {
 					this.dessinerObjet("MUR", i, j, im);
