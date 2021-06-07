@@ -32,7 +32,7 @@ public class JeuPerso implements Jeu {
 	 * surcharge toString
 	 */
 	public String toString() {
-		return ("" + this.getPj());
+		return ("" + this.getPj() + "+" + this.getL() );
 	}
 
 	/**
@@ -66,7 +66,7 @@ public class JeuPerso implements Jeu {
 	 * 
 	 * @return le labyrinthe du jeu
 	 */
-	public Labyrinthe getL() {
+	public Labyrinthe getLabyrinthe() {
 		return this.l;
 	}
 
