@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 /bin/
 .project
 .classpath
 /.settings/
 *.iml
 /idea/
+=======
+.class
+>>>>>>> 117bc3abc268832271d8e75992087027ce199a76
