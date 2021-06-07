@@ -35,18 +35,33 @@ public class Personnage {
 	 */
 	public void deplacer(Commande c) {
 		
-		if (c.gauche)
-		{
-			this.x--;
-			if (this.x < 0)
+		if (c.gauche) {
+			this.x--;	
+			if (this.x =< 0) {
 				this.x = 0;
+			}
 		}
 
-		if (c.droite)
-		{
-			this.x++;
-			if (this.x >LIMIT_X)
+		if (c.droite) {
+			this.x++;	
+			if (this.x >LIMIT_X) {
 				this.x = LIMIT_X;
+			}
+
+		}
+		
+		if (c.bas) {
+			this.y++;
+			if (this.y >LIMIT_Y) {
+				this.y = LIMIT_Y;
+			}
+		}
+		
+		if (c.haut) {
+			this.y--;		
+			if (this.y < 0) {
+				this.y = 0;
+			}
 		}
 	}
 
