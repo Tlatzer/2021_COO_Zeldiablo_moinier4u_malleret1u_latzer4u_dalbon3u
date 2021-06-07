@@ -8,7 +8,7 @@ import moteurJeu.DessinJeu;
 
 /**
  * un afficheur graphique associe au JeuTest fourni
- * 
+ *
  * @author vthomas
  */
 public class DessinPerso implements DessinJeu {
@@ -25,7 +25,7 @@ public class DessinPerso implements DessinJeu {
 
 	/**
 	 * appelle constructeur parent
-	 * 
+	 *
 	 * @param j
 	 *            le jeutest a afficher
 	 */
@@ -60,20 +60,21 @@ public class DessinPerso implements DessinJeu {
 	 */
 	public void dessiner(BufferedImage im) {
 		Personnage pj = jeu.getPj();
-		this.dessinerObjet("PJ", pj.x, pj.y, im);
-		
-		for (int i=0;i<jeu.getLabyrinthe().length();i++) {
 
-			for (int j=0;j<jeu.getLabyrinthe().length();i++) {
-				
+
+		for (int i=0;i<jeu.getLabyrinthe().getTaille()-1;i++) {
+
+			for (int j=0;j<jeu.getLabyrinthe().getTaille()-1;j++) {
+
 				if (jeu.getLabyrinthe().getEmplacement(i,j)==1 ) {
 					this.dessinerObjet("MUR", i, j, im);
 				}
-				
+
 
 			}
 
 		}
+		this.dessinerObjet("PJ", pj.x, pj.y, im);
 	}
 
 }
