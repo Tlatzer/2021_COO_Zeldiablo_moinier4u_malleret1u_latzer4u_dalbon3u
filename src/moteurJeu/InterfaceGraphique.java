@@ -1,5 +1,7 @@
 package moteurJeu;
 
+import java.awt.Color;
+
 import javax.swing.JFrame;
 
 /**
@@ -32,7 +34,7 @@ public class InterfaceGraphique {
 	 */
 	public InterfaceGraphique(DessinJeu afficheurUtil, int x, int y) {
 		// creation JFrame
-		JFrame f = new JFrame();
+		JFrame f = new JFrame("Zeldiablo");
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		// creation panel
@@ -48,7 +50,7 @@ public class InterfaceGraphique {
 		f.pack();
 		f.getContentPane().setFocusable(true);
 		f.getContentPane().requestFocus();
-
+		f.setLocationRelativeTo(null);
 		f.setVisible(true);
 
 	}
