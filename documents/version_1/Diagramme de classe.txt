@@ -1,0 +1,30 @@
+@startuml
+title Ajout d'un labyrinthe de 16*16 
+class Labyrinthe{
+  -labyrinthe:int[16][16]
+  +Labyrinthe()
+  +getEmplacement(int x, int y):void
+  +getLabyrinthe():int[16][16]
+}
+
+class JeuPerso{
+  +JeuPerso()
+  +toString()
+  +evoluer(Commande commande)
+  +etreFini()
+  +getPj()
+  +getLabyrinthe()
+}
+class Personnage{
+  +x:int
+  +y:int
+  +LIMIT_X:int
+  +LIMIT_Y:int
+  +Personnage
+  +deplacer(Commande c)
+  +toString()
+}
+
+JeuPerso "1" --> "1" Labyrinthe : -labyrinthe
+JeuPerso "1" --> "0..1" Personnage : -pj
+@enduml
