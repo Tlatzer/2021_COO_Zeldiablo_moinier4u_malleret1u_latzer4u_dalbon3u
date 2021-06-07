@@ -1,0 +1,24 @@
+@startuml
+title les colisions entre le personnage et le labyrinthe
+
+'''participant "DessinPerso" as dp
+participant "jp:JeuPerso" as jp
+participant "p:Personnage" as p
+participant "lab:Labyrinthe" as lab
+
+
+[->jp :evoluer(commande)
+activate jp
+    jp->p :deplacer(commande)
+    activate p
+        p->lab :getEmplacement(x,y)
+        activate lab
+        lab-->p: val
+        deactivate lab
+    p-->jp
+    deactivate p
+jp-->[
+deactivate jp
+
+
+@enduml
