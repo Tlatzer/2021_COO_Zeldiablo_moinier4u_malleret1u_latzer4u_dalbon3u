@@ -19,7 +19,7 @@ public class TestLabyrinthe {
 		int[][] tab = new int [20][20];
 		
 		JeuPerso jeu = new JeuPerso();
-		Labyrinthe lab = JeuPerso.getLabyrinthe();
+		Labyrinthe lab = jeu.getLabyrinthe();
 		
 		tab = lab.getLabyrinthe();
 		longueur = tab.length;
