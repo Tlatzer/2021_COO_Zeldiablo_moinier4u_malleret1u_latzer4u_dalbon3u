@@ -72,4 +72,7 @@ public class Personnage {
 		return ("(" + this.x+","+this.y+")");
 	}
 
+	public Labyrinthe getLabyrinthe(){
+		return this.lab;
+	}
 }
