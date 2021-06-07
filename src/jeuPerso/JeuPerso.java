@@ -18,7 +18,7 @@ public class JeuPerso implements Jeu {
 	/**
 	 * le labyrinthe du jeu
 	 */
-	private Labyrinthe l;
+	private static Labyrinthe l;
 
 	/**
 	 * constructeur de jeu avec un Personnage
