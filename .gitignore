@@ -1,1 +1,11 @@
 /bin/
+<<<<<<< HEAD
+=======
+.project
+.classpath
+/.settings/
+*.iml
+/idea/
+=======
+.class
+>>>>>>> 8d6345cc59d2ea183ba2678b0f562cc38034fe41
