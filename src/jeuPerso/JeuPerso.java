@@ -16,9 +16,15 @@ public class JeuPerso implements Jeu {
 	private Personnage pj;
 
 	/**
+	 * le labyrinthe du jeu
+	 */
+	private Labyrinthe l;
+
+	/**
 	 * constructeur de jeu avec un Personnage
 	 */
 	public JeuPerso() {
+		this.l = new Labyrinthe();
 		this.pj=new Personnage();
 	}
 
@@ -52,7 +58,16 @@ public class JeuPerso implements Jeu {
 	 * @return personnage du jeu
 	 */
 	public Personnage getPj() {
-		return pj;
+		return this.pj;
+	}
+
+	/**
+	 * getter pour le labyrinthe
+	 * 
+	 * @return le labyrinthe du jeu
+	 */
+	public Labyrinthe getL() {
+		return this.l;
 	}
 
 }
