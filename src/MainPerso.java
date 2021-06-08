@@ -26,6 +26,7 @@ public class MainPerso {
 		JeuPerso jeu = new JeuPerso();
 		DessinPerso aff = new DessinPerso(jeu);
 
+
 		// classe qui lance le moteur de jeu generique
 		MoteurGraphique moteur = new MoteurGraphique(jeu, aff);
 		// lance la boucle de jeu qui tourne jusque la fin du jeu
@@ -36,6 +37,7 @@ public class MainPerso {
 		Scanner sc = new Scanner(System.in);
 		sc.nextLine();
 		System.exit(1);
+		
 	}
 
 }

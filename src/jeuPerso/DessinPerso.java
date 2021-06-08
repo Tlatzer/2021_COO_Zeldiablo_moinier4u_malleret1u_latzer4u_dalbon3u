@@ -47,9 +47,10 @@ public class DessinPerso implements DessinJeu {
 					TAILLE_CASE);
 			break;
 		case "MONSTRE":
-			crayon.setColor(Color.red);
+			crayon.setColor(Color.RED);
 			crayon.fillOval(x * TAILLE_CASE, y * TAILLE_CASE, TAILLE_CASE,
 			TAILLE_CASE);
+			break;
 		case "MUR":
 			crayon.setColor(Color.gray);
 			crayon.fillRect(x * TAILLE_CASE, y * TAILLE_CASE, TAILLE_CASE,
@@ -61,7 +62,7 @@ public class DessinPerso implements DessinJeu {
 					TAILLE_CASE);
 			break;
 		case "PIEGE":
-			crayon.setColor(Color.red);
+			crayon.setColor(Color.orange);
 			crayon.fillRect(x * TAILLE_CASE, y * TAILLE_CASE, TAILLE_CASE,
 					TAILLE_CASE);
 			break;
