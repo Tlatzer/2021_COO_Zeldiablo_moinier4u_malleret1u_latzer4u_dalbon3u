@@ -2,6 +2,7 @@ package Test;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
+
 import jeuPerso.JeuPerso;
 import jeuPerso.Labyrinthe;
 import jeuPerso.Personnage;
@@ -33,20 +34,6 @@ public class TestPersonnage {
 		assertEquals("Le Personnage devrait ne pas être sur une case libre", res, 1);
 		
 	}
-	
-	@Test
-	public void testSpawnPersonnage() {
-		
-		JeuPerso jeu = new JeuPerso();
-		Personnage pers = jeu.getPj();
-		Labyrinthe lab = jeu.getLabyrinthe();
-		
-		int res = lab.getEmplacement(2,0);
-		
-		assertEquals("Le Personnage devrait ne pas être sur une case libre", res, 1);
-		
-	}
-
 	
 
 }
