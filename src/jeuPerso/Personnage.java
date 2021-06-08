@@ -33,6 +33,16 @@ public class Personnage {
 	}
 
 	/**
+	 * constructeur avec parametre de labyrinthe
+	 */
+	public Personnage(String lvl) {
+		this.x = LIMIT_X / 2;
+		this.y = LIMIT_Y / 2;
+		this.lab = new Labyrinthe(lvl);
+		this.pv = 100;
+	}
+
+	/**
 	 * deplacer le personnage dans une direction
 	 *
 	 * @param m
@@ -61,27 +71,42 @@ public class Personnage {
 		}
 
 		if(type == 2) lab.teleportation(this);
-		
+
 		if(type == 3) {
 			this.degatCase();
 			System.out.println("pv : " + this.pv);
 		}
 	}
 
+	/**
+	 * Methode qui permet au personnage de prendre des degats
+	 */
+
 	public int degatCase() {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4437f2eb8db0e19b863bd39c11e4417bd740de64
 		this.pv -= 50;
 		if (this.pv == 0 || this.pv <0) {
 			this.pv = 0;
-			System.out.println("vous étes mort");
+			System.out.println("vous ï¿½tes mort");
 		}
 		return this.pv;
 	}
-	
-	
+
+
+	/**
+	 * surcharge toString
+	 */
 	public String toString() {
 		return ("(" + this.x+","+this.y+")");
 	}
 
+	/**
+	 * Getter de Personnage
+	 * @return retourne le labyrinthe du personnage
+	 */
 	public Labyrinthe getLabyrinthe(){
 		return this.lab;
 	}

@@ -1,0 +1,38 @@
+@startuml
+title Ajout d'un monstre
+class Labyrinthe{
+  -labyrinthe:int[][]
+  +Labyrinthe()
+  +getEmplacement(int x,int y):int
+}
+
+class JeuPerso{
+  +JeuPerso()
+  +toString()
+  +evoluer(Commande commande)
+  +etreFini()
+  +getPj()
+  +getLabyrinthe()
+}
+class Personnage{
+  +x:int
+  +y:int
+  +LIMIT_X:int
+  +LIMIT_Y:int
+  +Personnage()
+  +deplacer(Commande c)
+  +toString()
+  +getLabyrinthe()
+}
+class Monstre {
+-pv:int
+-degats:int
++Monstre()
++getDegats()
++getPv()
+}
+
+Personnage "1" --> "1" Labyrinthe : +lab
+JeuPerso "1" --> "0..1" Personnage : -pj
+JeuPerso "1" --> "*" Monstre : -monstre
+@enduml

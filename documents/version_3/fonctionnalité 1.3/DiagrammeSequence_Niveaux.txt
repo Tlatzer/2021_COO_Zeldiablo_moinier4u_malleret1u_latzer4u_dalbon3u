@@ -1,5 +1,5 @@
 @startuml
-title les colisions entre le personnage et le labyrinthe
+title ajout des niveaux (ici création niveau 1)
 
 participant "DessinPerso" as dp
 participant "jp:JeuPerso" as jp
@@ -7,16 +7,12 @@ participant "p:Personnage" as p
 participant "lab:Labyrinthe" as lab
 
 create jp
-dp->jp :new("lvl 1")
+dp->jp:create("lvl 1")
 
 create p
-jp->p :new("lvl 1")
+jp->p:create("lvl 1")
 
 create lab
-p->lab :new("lvl 1")
-
-
-
-
+p->lab:create("lvl 1")
 
 @enduml
