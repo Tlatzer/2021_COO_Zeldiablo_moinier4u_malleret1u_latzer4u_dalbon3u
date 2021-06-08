@@ -1,0 +1,25 @@
+@startuml
+title Deplacement sur une case de teleportation
+
+participant "jp:JeuPerso" as jp
+participant "p:Personnage" as p
+participant "lab:Labyrinthe" as lab
+
+
+[->jp :evoluer(commande)
+activate jp
+    jp->p :deplacer(commande)
+    activate p
+        p->lab :getEmplacement(x,y)
+        activate lab
+        lab-->p: val
+        deactivate lab
+        p->lab :teleportation()
+        activate lab
+        lab-->p
+        deactivate lab
+    p-->jp
+    deactivate p
+jp-->[
+deactivate jp
+@enduml
