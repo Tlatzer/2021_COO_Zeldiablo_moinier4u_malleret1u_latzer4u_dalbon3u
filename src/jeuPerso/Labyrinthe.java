@@ -41,6 +41,7 @@ public class Labyrinthe {
 	 *  - 0 libre
 	 *  - 1 mur
 	 *  - 2 case de teleportation
+	 *  - 3 case de degats
 	 */
 	public int getEmplacement(int x, int y) {
 		int res = 0;
@@ -52,10 +53,10 @@ public class Labyrinthe {
 
 		if(this.labyrinthe[x][y] == 2)
 			res = 2;
-		
+
 		if(this.labyrinthe[x][y] == 3)
 			res = 3;
-		
+
 		return res;
 	}
 
@@ -67,7 +68,7 @@ public class Labyrinthe {
 		p.x = 13;
 		p.y = 13;
 	}
-	
+
 
 	/**
 	 * Getter de labyrinthe

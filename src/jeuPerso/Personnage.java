@@ -61,28 +61,39 @@ public class Personnage {
 		}
 
 		if(type == 2) lab.teleportation(this);
-		
+
 		if(type == 3) {
 			this.degatCase();
 			System.out.println("pv : " + this.pv);
 		}
 	}
 
+	/**
+	 * Methode qui permet au personnage de prendre des degats
+	 */
+
 	public int degatCase() {
-		
+
 		this.pv -= 50;
 		if (this.pv == 0 || this.pv <0) {
 			this.pv = 0;
-			System.out.println("vous étes mort");
+			System.out.println("vous ï¿½tes mort");
 		}
 		return this.pv;
 	}
-	
-	
+
+
+	/**
+	 * surcharge toString
+	 */
 	public String toString() {
 		return ("(" + this.x+","+this.y+")");
 	}
 
+	/**
+	 * Getter de Personnage
+	 * @return retourne le labyrinthe du personnage
+	 */
 	public Labyrinthe getLabyrinthe(){
 		return this.lab;
 	}

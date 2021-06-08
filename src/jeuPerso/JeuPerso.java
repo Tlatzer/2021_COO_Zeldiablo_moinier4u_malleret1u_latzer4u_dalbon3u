@@ -16,13 +16,13 @@ public class JeuPerso implements Jeu {
 	 * le personnage du jeu
 	 */
 	private Personnage pj;
-	
+
 	private ArrayList<Monstre> liste_monstre;
 
 	/**
 	 * constructeur de jeu avec un Personnage
 	 */
-	
+
 	public JeuPerso() {
 		this.pj=new Personnage();
 		this.liste_monstre = new ArrayList<Monstre>();
