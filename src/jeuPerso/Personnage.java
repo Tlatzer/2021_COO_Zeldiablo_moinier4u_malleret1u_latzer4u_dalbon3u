@@ -28,7 +28,7 @@ public class Personnage {
 	public Personnage() {
 		this.x = LIMIT_X / 2;
 		this.y = LIMIT_Y / 2;
-		this.lab = new Labyrinthe();
+		this.lab = new Labyrinthe("lvl 3");
 		this.pv = 100;
 	}
 
@@ -87,7 +87,7 @@ public class Personnage {
 		this.pv -= 50;
 		if (this.pv == 0 || this.pv <0) {
 			this.pv = 0;
-			System.out.println("vous �tes mort");
+			System.out.println("vous etes mort");
 		}
 		return this.pv;
 	}
