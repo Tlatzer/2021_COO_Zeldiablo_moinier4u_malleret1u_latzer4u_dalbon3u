@@ -1,0 +1,46 @@
+@startuml
+title Ajout de la teleportation
+class Labyrinthe{
+  -labyrinthe:int[][]
+  +Labyrinthe(String lvl)
+  +Labyrinthe()
+  +getEmplacement(int x,int y):int
+  +getLabyrinthe():int[][]
+  +getTaille():int
+  +teleportation(Joueur j)
+}
+
+class JeuPerso{
+  +JeuPerso(String lvl)
+  +JeuPerso()
+  +toString()
+  +evoluer(Commande commande)
+  +etreFini()
+  +getPj()
+  +getLabyrinthe()
+}
+
+class Personnage{
+  +x:int
+  +y:int
+  +lab:Labyrinthe
+  +LIMIT_X:int
+  +LIMIT_Y:int
+  +Personnage()
+  +Personnage(String lvl)
+  +deplacer(Commande c)
+  +toString()
+  +getLabyrinthe()
+}
+
+class DessinPerso{
+  -TAILLE_CASE:int
+  +DessinPerso(JeuPerso j)
+  +dessinerObjet(String s, int x, int y, BufferedImage im)
+  +dessiner(BufferedImage im)
+}
+
+DessinPerso "1" --> "1" JeuPerso : -jeu
+Personnage "1" --> "1" Labyrinthe : +lab
+JeuPerso "1" --> "0..1" Personnage : -pj
+@enduml
