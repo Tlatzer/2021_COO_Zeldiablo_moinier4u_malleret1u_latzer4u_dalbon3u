@@ -80,7 +80,7 @@ public class DessinPerso implements DessinJeu {
 		}
 		this.dessinerObjet("PJ", pj.x, pj.y, im);
 
-		ArrayList<Monstre> m = jeu.getListeMonstre();s
+		ArrayList<Monstre> m = jeu.getListeMonstre();
 
 		for(int k=0;k<m.size();k++) {
 			this.dessinerObjet("MONSTRE",m.get(k).getX(),m.get(k).getY(),im);
