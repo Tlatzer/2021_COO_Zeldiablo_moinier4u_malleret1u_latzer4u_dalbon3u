@@ -22,13 +22,24 @@ public class JeuPerso implements Jeu {
 	/**
 	 * constructeur de jeu avec un Personnage
 	 */
-
 	public JeuPerso() {
 		this.pj=new Personnage();
 		this.liste_monstre = new ArrayList<Monstre>();
 		Monstre m = new Monstre(5,3);
 		if(( this.pj.getLabyrinthe().getEmplacement(m.getX(), m.getY()))== 0)
 			this.liste_monstre.add(m);
+	}
+
+	/**
+	 * constructeur 
+	 */
+	public JeuPerso(String lvl) {
+		this.pj=new Personnage(lvl);
+		this.liste_monstre = new ArrayList<Monstre>();
+		Monstre m = new Monstre(5,3);
+		if(( this.pj.getLabyrinthe().getEmplacement(m.getX(), m.getY()))== 0)
+			this.liste_monstre.add(m);
+	}
 	}
 
 	/**

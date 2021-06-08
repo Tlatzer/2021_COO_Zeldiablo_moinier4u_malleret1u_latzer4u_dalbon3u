@@ -7,7 +7,14 @@ public class Labyrinthe {
 /**
  * attributs de Labyrinthe qui represente un tableau 2d de type entier
  */
-	private int[][]labyrinthe = {
+	private int[][] labyrinthe;
+
+/**
+ * constructeur vide
+ *
+ **/
+	public Labyrinthe() {
+		this.labyrinthe = {
 			{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
 			{1,3,0,0,0,0,0,0,0,0,0,0,0,0,3,1},
 			{1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
@@ -25,12 +32,6 @@ public class Labyrinthe {
 			{1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1},
 			{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}
 	};
-
-/**
- * constructeur vide
- *
- **/
-	public Labyrinthe() {
 
 	}
 

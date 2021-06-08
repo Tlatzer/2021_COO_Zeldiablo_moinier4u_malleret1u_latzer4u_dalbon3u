@@ -33,6 +33,16 @@ public class Personnage {
 	}
 
 	/**
+	 * constructeur avec parametre de labyrinthe
+	 */
+	public Personnage(String lvl) {
+		this.x = LIMIT_X / 2;
+		this.y = LIMIT_Y / 2;
+		this.lab = new Labyrinthe(lvl);
+		this.pv = 100;
+	}
+
+	/**
 	 * deplacer le personnage dans une direction
 	 *
 	 * @param m
