@@ -16,13 +16,25 @@ public class Monstre {
  * Nombre degats d'attaque d'un monstre
  */
 	private int degats;
+
+/**
+* Coordonnes du monstre en x 
+*/
+	private int x;
+	
+/**
+* Coordonnes du monstre en y
+ */
+	private int y;
 	
 /**
  * Construction d'un monstre 
  */
-	public Monstre() {
+	public Monstre(int abs, int ord) {
 		this.pv = 10;
 		this.degats = 2;
+		this.x = abs;
+		this.y = ord;
 	}
 	
 /**
@@ -46,6 +58,21 @@ public class Monstre {
  */
 	public int getDegats() {
 		return this.degats;
+	}
+/**
+ * Getteur de l'attribut x
+ * @return abbscisse du monstre
+ */
+	public int getX() {
+		return this.x;
+	}
+
+/**
+ * Gutter de l'attribut y
+ * @return ordonnees
+ */
+	public int getY() {
+		return this.y;
 	}
 	
 	
