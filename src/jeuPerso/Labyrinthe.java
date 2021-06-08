@@ -11,7 +11,7 @@ public class Labyrinthe {
 			{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
 			{1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
 			{1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
-			{1,0,0,0,0,0,0,0,0,0,1,1,1,1,0,1},
+			{1,0,0,2,0,0,0,0,0,0,1,1,1,1,0,1},
 			{1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1},
 			{1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1},
 			{1,1,1,1,1,1,0,0,0,0,0,0,0,1,0,1},
@@ -19,7 +19,7 @@ public class Labyrinthe {
 			{1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
 			{1,0,0,0,0,0,0,0,1,1,1,1,0,0,0,1},
 			{1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1},
-			{1,0,0,0,0,0,1,0,0,0,1,1,0,0,0,1},
+			{1,0,0,2,0,0,1,0,0,0,1,1,0,0,0,1},
 			{1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1},
 			{1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1},
 			{1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1},
@@ -40,6 +40,7 @@ public class Labyrinthe {
 	 * @return retourne un entier qui correspond a :
 	 *  - 0 libre
 	 *  - 1 mur
+	 *  - 2 case de teleportation
 	 */
 	public int getEmplacement(int x, int y) {
 		int res = 0;
@@ -49,9 +50,19 @@ public class Labyrinthe {
 		if(this.labyrinthe[x][y] == 1)
 			res = 1;
 
+		if(this.labyrinthe[x][y] == 2)
+			res = 2;
 		return res;
 	}
 
+
+	/**
+	 * Methode permettant au joueur de se teleporter en 13 - 13
+	 */
+	public void teleportation(Personnage p){
+		p.x = 13;
+		p.y = 13;
+	}
 
 	/**
 	 * Getter de labyrinthe
@@ -65,7 +76,7 @@ public class Labyrinthe {
 
 	/**
 	 * Getter de Labyrinthe
-	 * @return retourne la taille du labyrinthe 
+	 * @return retourne la taille du labyrinthe
 	 */
 	public int getTaille(){
 		return this.labyrinthe.length;
