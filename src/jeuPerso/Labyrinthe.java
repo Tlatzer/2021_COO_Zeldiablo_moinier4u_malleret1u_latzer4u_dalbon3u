@@ -36,11 +36,6 @@ public class Labyrinthe {
 	}
 
 	public Labyrinthe(String level) {
-<<<<<<< HEAD
-		this.labyrinthe = new int[16][16];
-
-=======
->>>>>>> e2c71767118d7bb0e6f1e592850fd427e74ec04f
 		switch (level) {
 			case "lvl 1":
 				int[][] lab={
