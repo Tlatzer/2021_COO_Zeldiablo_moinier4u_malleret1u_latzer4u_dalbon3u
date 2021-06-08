@@ -1,0 +1,18 @@
+@startuml
+title ajout des niveaux (ici création niveau 1)
+
+participant "DessinPerso" as dp
+participant "jp:JeuPerso" as jp
+participant "p:Personnage" as p
+participant "lab:Labyrinthe" as lab
+
+create jp
+dp->jp:create("lvl 1")
+
+create p
+jp->p:create("lvl 1")
+
+create lab
+p->lab:create("lvl 1")
+
+@enduml
