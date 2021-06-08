@@ -32,7 +32,7 @@ public class JeuPerso implements Jeu {
 	}
 
 	/**
-	 * constructeur 
+	 * constructeur
 	 */
 	public JeuPerso(String lvl) {
 		this.pj=new Personnage(lvl);
@@ -41,7 +41,7 @@ public class JeuPerso implements Jeu {
 		if(( this.pj.getLabyrinthe().getEmplacement(m.getX(), m.getY()))== 0)
 			this.liste_monstre.add(m);
 	}
-	
+
 
 	/**
 	 * surcharge toString
