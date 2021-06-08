@@ -61,6 +61,11 @@ public class DessinPerso implements DessinJeu {
 			crayon.fillRect(x * TAILLE_CASE, y * TAILLE_CASE, TAILLE_CASE,
 					TAILLE_CASE);
 			break;
+		case "PIEGE":
+			crayon.setColor(Color.red);
+			crayon.fillRect(x * TAILLE_CASE, y * TAILLE_CASE, TAILLE_CASE,
+					TAILLE_CASE);
+			break;
 		default:
 			throw new AssertionError("objet inexistant");
 		}
@@ -85,6 +90,9 @@ public class DessinPerso implements DessinJeu {
 					this.dessinerObjet("TP", i, j, im);
 				}
 
+				if (jeu.getLabyrinthe().getEmplacement(i,j)==3 ) {
+					this.dessinerObjet("PIEGE", i, j, im);
+				}
 			}
 
 		}
