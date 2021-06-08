@@ -1,0 +1,30 @@
+@startuml
+title Dégats des cases piegées du Labyrinthe 
+
+participant "jp : JeuPerso" as jeu
+participant "pers : Personnage" as pers
+participant "lab : Labyrinthe" as lab
+
+[->jeu
+activate jeu
+    jeu-> pers : deplacer(Commande)
+
+    activate pers
+        
+        pers->lab : getEmplacement(x, y)
+
+        activate lab
+            lab-->pers : 3
+        deactivate lab
+
+        pers->pers : degatCase
+            
+        activate pers 
+        deactivate pers
+        pers-->jeu
+    deactivate pers
+
+jeu-->[
+deactivate jeu
+
+@enduml

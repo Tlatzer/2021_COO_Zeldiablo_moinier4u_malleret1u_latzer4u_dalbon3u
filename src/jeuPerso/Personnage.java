@@ -69,7 +69,6 @@ public class Personnage {
 	}
 
 	public int degatCase() {
-		
 		this.pv -= 50;
 		if (this.pv == 0 || this.pv <0) {
 			this.pv = 0;
