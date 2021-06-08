@@ -45,6 +45,10 @@ public class DessinPerso implements DessinJeu {
 			crayon.fillOval(x * TAILLE_CASE, y * TAILLE_CASE, TAILLE_CASE,
 					TAILLE_CASE);
 			break;
+		case "MONSTRE":
+			crayon.setColor(Color.red);
+			crayon.fillOval(x * TAILLE_CASE, y * TAILLE_CASE, TAILLE_CASE,
+			TAILLE_CASE);
 		case "MUR":
 			crayon.setColor(Color.gray);
 			crayon.fillRect(x * TAILLE_CASE, y * TAILLE_CASE, TAILLE_CASE,
@@ -75,6 +79,12 @@ public class DessinPerso implements DessinJeu {
 
 		}
 		this.dessinerObjet("PJ", pj.x, pj.y, im);
+
+		ArrayList<Monstre> m = jeu.getListeMonstre();
+
+		for(int k=0;k<m.size();k++) {
+			this.dessinerObjet("MONSTRE",m.get(k).getX(),m.get(k).getY(),im);
+		}
 	}
 
 }

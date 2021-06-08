@@ -17,7 +17,7 @@ public class JeuPerso implements Jeu {
 	 */
 	private static Personnage pj;
 	
-	ArrayList<Monstre> liste_monstre;
+	private ArrayList<Monstre> liste_monstre;
 
 	/**
 	 * constructeur de jeu avec un Personnage
@@ -71,6 +71,9 @@ public class JeuPerso implements Jeu {
 	 */
 	public Labyrinthe getLabyrinthe() {
 		return pj.getLabyrinthe();
+	}
+	public ArrayList<Monstre> getListeMonstre() {
+		return this.liste_monstre;
 	}
 
 }
