@@ -6,6 +6,9 @@ import org.junit.Test;
 
 public class TestMonstre {
 
+	/**
+	 * Test des créations des monstres par le jeu
+	 */
 	@Test
 	public void testCreationMonstre() {
 		//on créé un jeu avec le constructeur par défaut

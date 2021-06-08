@@ -26,6 +26,39 @@ public class TestLabyrinthe {
 		
 		assertEquals("Le labyrinthe devrait avoir une longueur de 16", 16, longueur);
 	}
+
+	/**
+	 * Test du bon Labyrinthe depuis le constructeur de la classe Labyrinthe
+	 */
+	@Test
+	public void testChoixNiveau() {
+		//préparation des données
+		int[][] tabC = {
+			{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+			{1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+			{1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+			{1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+			{1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+			{1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+			{1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+			{1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+			{1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+			{1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+			{1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+			{1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+			{1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+			{1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+			{1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+			{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}
+		};
+
+		Labyrinthe lTest = new Labyrinthe("lvl 3");
+
+		int[][] res = lTest.getLabyrinthe();
+
+		//comparaison
+		assertEquals("le jeu devrait etre le niveau 3 dans ce cas",tabC,res);
+	}
 	
 	
 }
