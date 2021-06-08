@@ -9,7 +9,7 @@ public class Labyrinthe {
  */
 	private int[][]labyrinthe = {
 			{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
-			{1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+			{1,3,0,0,0,0,0,0,0,0,0,0,0,0,3,1},
 			{1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
 			{1,0,0,2,0,0,0,0,0,0,1,1,1,1,0,1},
 			{1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1},
@@ -52,6 +52,10 @@ public class Labyrinthe {
 
 		if(this.labyrinthe[x][y] == 2)
 			res = 2;
+		
+		if(this.labyrinthe[x][y] == 3)
+			res = 3;
+		
 		return res;
 	}
 
@@ -63,6 +67,7 @@ public class Labyrinthe {
 		p.x = 13;
 		p.y = 13;
 	}
+	
 
 	/**
 	 * Getter de labyrinthe
