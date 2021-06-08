@@ -5,7 +5,7 @@ package jeuPerso;
 public class Labyrinthe {
 
 /**
- *
+ * attributs de Labyrinthe qui represente un tableau 2d de type entier
  */
 	private int[][]labyrinthe = {
 			{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
@@ -61,8 +61,12 @@ public class Labyrinthe {
 	public int[][] getLabyrinthe(){
 		return this.labyrinthe;
 	}
-	
 
+
+	/**
+	 * Getter de Labyrinthe
+	 * @return retourne la taille du labyrinthe 
+	 */
 	public int getTaille(){
 		return this.labyrinthe.length;
 	}
