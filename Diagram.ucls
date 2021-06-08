@@ -27,25 +27,14 @@
     project="2021_COO_Zeldiablo_moinier4u_malleret1u_latzer4u_dalbon3u" 
     file="/2021_COO_Zeldiablo_moinier4u_malleret1u_latzer4u_dalbon3u/src/jeuPerso/JeuPerso.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="464" y="328"/>    
+    <position height="-1" width="-1" x="406" y="364"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="jeuPerso.Labyrinthe" 
-    project="2021_COO_Zeldiablo_moinier4u_malleret1u_latzer4u_dalbon3u" 
-    file="/2021_COO_Zeldiablo_moinier4u_malleret1u_latzer4u_dalbon3u/src/jeuPerso/Labyrinthe.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="767" y="459"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="5" language="java" name="jeuPerso.DessinPerso" 
+  <class id="4" language="java" name="jeuPerso.DessinPerso" 
     project="2021_COO_Zeldiablo_moinier4u_malleret1u_latzer4u_dalbon3u" 
     file="/2021_COO_Zeldiablo_moinier4u_malleret1u_latzer4u_dalbon3u/src/jeuPerso/DessinPerso.java" binary="false" 
     corner="BOTTOM_RIGHT">    
@@ -56,8 +45,19 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
+  <class id="5" language="java" name="jeuPerso.Labyrinthe" 
+    project="2021_COO_Zeldiablo_moinier4u_malleret1u_latzer4u_dalbon3u" 
+    file="/2021_COO_Zeldiablo_moinier4u_malleret1u_latzer4u_dalbon3u/src/jeuPerso/Labyrinthe.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="793" y="439"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
   <association id="6">    
-    <end type="SOURCE" refId="5" navigable="false">      
+    <end type="SOURCE" refId="4" navigable="false">      
       <attribute id="7" name="jeu"/>      
       <multiplicity id="8" minimum="0" maximum="1"/>    
     </end>    
@@ -65,11 +65,11 @@
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="9">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="10" name="lab"/>      
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="10" name="labyrinthe"/>      
       <multiplicity id="11" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
+    <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="12">    

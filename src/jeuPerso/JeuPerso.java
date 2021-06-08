@@ -19,6 +19,8 @@ public class JeuPerso implements Jeu {
 
 	private ArrayList<Monstre> liste_monstre;
 
+	private Labyrinthe labyrinthe;
+
 	/**
 	 * constructeur de jeu avec un Personnage
 	 */
@@ -26,22 +28,24 @@ public class JeuPerso implements Jeu {
 		this.pj=new Personnage();
 		this.liste_monstre = new ArrayList<Monstre>();
 		Monstre m = new Monstre(5,3);
-		if(( this.pj.getLabyrinthe().getEmplacement(m.getX(), m.getY()))== 0)
-			this.pj.getLabyrinthe().setLabyrinthe(5, 3, 4);
+		this.labyrinthe = new Labyrinthe();
+		if(( this.labyrinthe.getEmplacement(m.getX(), m.getY()))== 0)
+			this.labyrinthe.setLabyrinthe(5, 3, 4);
 			this.liste_monstre.add(m);
 	}
 
 	/**
-	 * constructeur 
+	 * constructeur
 	 */
 	public JeuPerso(String lvl) {
 		this.pj=new Personnage(lvl);
 		this.liste_monstre = new ArrayList<Monstre>();
 		Monstre m = new Monstre(5,3);
-		if(( this.pj.getLabyrinthe().getEmplacement(m.getX(), m.getY()))== 0)
+		this.labyrinthe = new Labyrinthe();
+		if(( this.labyrinthe.getEmplacement(m.getX(), m.getY()))== 0)
 			this.liste_monstre.add(m);
 	}
-	
+
 
 	/**
 	 * surcharge toString
@@ -57,7 +61,7 @@ public class JeuPerso implements Jeu {
 	 *            chaine qui donne ordre
 	 */
 	public void evoluer(Commande commande) {
-		this.getPj().deplacer(commande);
+		this.getPj().deplacer(commande, this.labyrinthe);
 
 	}
 
@@ -82,8 +86,9 @@ public class JeuPerso implements Jeu {
 	 * @return le labyrinthe du jeu
 	 */
 	public Labyrinthe getLabyrinthe() {
-		return pj.getLabyrinthe();
+		return this.labyrinthe;
 	}
+
 	public ArrayList<Monstre> getListeMonstre() {
 		return this.liste_monstre;
 	}

@@ -14,7 +14,6 @@ public class Personnage {
 	public int y;
 	public int pv;
 
-	public Labyrinthe lab;
 
 	/**
 	 * taille de l'environnement
@@ -28,7 +27,6 @@ public class Personnage {
 	public Personnage() {
 		this.x = LIMIT_X / 2;
 		this.y = LIMIT_Y / 2;
-		this.lab = new Labyrinthe();
 		this.pv = 100;
 	}
 
@@ -38,7 +36,6 @@ public class Personnage {
 	public Personnage(String lvl) {
 		this.x = LIMIT_X / 2;
 		this.y = LIMIT_Y / 2;
-		this.lab = new Labyrinthe(lvl);
 		this.pv = 100;
 	}
 
@@ -48,7 +45,7 @@ public class Personnage {
 	 * @param m
 	 *            la chaine permettant de deplacer le personnage (N,S, E ou O)
 	 */
-	public void deplacer(Commande c) {
+	public void deplacer(Commande c, Labyrinthe lab) {
 		int type = -1;
 		if (c.gauche) {
 			type = lab.getEmplacement(this.x-1,this.y);
@@ -100,11 +97,5 @@ public class Personnage {
 		return ("(" + this.x+","+this.y+")");
 	}
 
-	/**
-	 * Getter de Personnage
-	 * @return retourne le labyrinthe du personnage
-	 */
-	public Labyrinthe getLabyrinthe(){
-		return this.lab;
-	}
+
 }

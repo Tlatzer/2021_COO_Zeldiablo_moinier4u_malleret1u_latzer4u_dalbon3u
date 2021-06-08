@@ -1,0 +1,48 @@
+@startuml
+title les colisions entre le personnage et monstre
+
+
+participant "jp:JeuPerso" as jp
+participant "m:Monstre" as m
+participant "p:Personnage" as p
+participant "lab:Labyrinthe" as lab
+participant "liste_monstre:ArrayList<Monstre>" as list
+
+
+jp->m:new Monstre(x,y)
+jp->p:new
+jp->list:new
+
+jp->lab:getEmplacement(x,y)
+activate jp
+activate lab
+lab-->jp:0
+deactivate jp
+deactivate lab
+jp->lab:setLabyrinthe(x,y,4)
+activate jp
+activate lab
+lab-->jp
+deactivate lab
+deactivate jp
+jp->list:add(m)
+activate list
+activate jp
+list-->jp
+deactivate list
+deactivate jp
+
+[->jp :evoluer(commande)
+activate jp
+
+    jp->p :deplacer(commande, lab)
+    activate p
+        p->lab :getEmplacement(x,y)
+        activate lab
+        lab-->p: val
+        deactivate lab
+    p-->jp
+    deactivate p
+jp-->[
+deactivate jp
+@enduml

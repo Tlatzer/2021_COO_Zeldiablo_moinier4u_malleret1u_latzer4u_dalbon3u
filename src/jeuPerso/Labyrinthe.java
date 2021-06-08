@@ -156,7 +156,6 @@ public class Labyrinthe {
 	 *  - 1 mur
 	 *  - 2 case de teleportation
 	 *  - 3 case de degats
-	 *  - 4 un monstre
 	 */
 	public int getEmplacement(int x, int y) {
 		int res = 0;
@@ -205,9 +204,10 @@ public class Labyrinthe {
 	public int getTaille(){
 		return this.labyrinthe.length;
 	}
-	
+	/**
+	 * 
+	 */
 	public void setLabyrinthe(int x, int y, int num) {
 		this.labyrinthe[x][y] = num;
 	}
 }
-
