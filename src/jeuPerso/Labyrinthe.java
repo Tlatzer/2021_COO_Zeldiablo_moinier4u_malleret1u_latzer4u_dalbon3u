@@ -63,6 +63,13 @@ public class Labyrinthe {
 		p.x = 13;
 		p.y = 13;
 	}
+	
+	
+	public void casePiegee(Personnage p) {
+		if (p.x == 5 && p.y == 5) {
+			p.degatCase();
+		}
+	}
 
 	/**
 	 * Getter de labyrinthe

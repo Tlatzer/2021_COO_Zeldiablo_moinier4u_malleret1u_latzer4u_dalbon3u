@@ -12,6 +12,7 @@ public class Personnage {
 	 */
 	public int x;
 	public int y;
+	public int pv;
 
 	public Labyrinthe lab;
 
@@ -61,6 +62,12 @@ public class Personnage {
 		if(type == 2) lab.teleportation(this);
 	}
 
+	public int degatCase() {
+		this.pv -= 50;
+		return this.pv;
+	}
+	
+	
 	public String toString() {
 		return ("(" + this.x+","+this.y+")");
 	}
