@@ -87,7 +87,7 @@ public class Personnage {
 		this.pv -= 50;
 		if (this.pv == 0 || this.pv <0) {
 			this.pv = 0;
-			System.out.println("vous �tes mort");
+			System.out.println("vous etes mort");
 		}
 		return this.pv;
 	}

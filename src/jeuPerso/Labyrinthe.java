@@ -201,5 +201,9 @@ public class Labyrinthe {
 	public int getTaille(){
 		return this.labyrinthe.length;
 	}
+	
+	public void setLabyrinthe(int x, int y, int num) {
+		this.labyrinthe[x][y] = num;
+	}
 }
 

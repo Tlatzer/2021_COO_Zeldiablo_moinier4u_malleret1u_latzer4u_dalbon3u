@@ -16,7 +16,7 @@
     project="2021_COO_Zeldiablo_moinier4u_malleret1u_latzer4u_dalbon3u" 
     file="/2021_COO_Zeldiablo_moinier4u_malleret1u_latzer4u_dalbon3u/src/jeuPerso/Personnage.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="830" y="221"/>    
+    <position height="-1" width="-1" x="784" y="185"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -27,7 +27,7 @@
     project="2021_COO_Zeldiablo_moinier4u_malleret1u_latzer4u_dalbon3u" 
     file="/2021_COO_Zeldiablo_moinier4u_malleret1u_latzer4u_dalbon3u/src/jeuPerso/JeuPerso.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="470" y="173"/>    
+    <position height="-1" width="-1" x="464" y="328"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -38,33 +38,52 @@
     project="2021_COO_Zeldiablo_moinier4u_malleret1u_latzer4u_dalbon3u" 
     file="/2021_COO_Zeldiablo_moinier4u_malleret1u_latzer4u_dalbon3u/src/jeuPerso/Labyrinthe.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="540" y="429"/>    
+    <position height="-1" width="-1" x="767" y="459"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <association id="5">    
+  <class id="5" language="java" name="jeuPerso.DessinPerso" 
+    project="2021_COO_Zeldiablo_moinier4u_malleret1u_latzer4u_dalbon3u" 
+    file="/2021_COO_Zeldiablo_moinier4u_malleret1u_latzer4u_dalbon3u/src/jeuPerso/DessinPerso.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="464" y="105"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="6">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="7" name="jeu"/>      
+      <multiplicity id="8" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="9">    
     <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="6" name="lab"/>      
-      <multiplicity id="7" minimum="0" maximum="1"/>    
+      <attribute id="10" name="lab"/>      
+      <multiplicity id="11" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="8">    
+  <association id="12">    
     <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="9" name="pj"/>      
-      <multiplicity id="10" minimum="0" maximum="1"/>    
+      <attribute id="13" name="pj"/>      
+      <multiplicity id="14" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="11">    
+  <association id="15">    
     <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="12" name="liste_monstre"/>      
-      <multiplicity id="13" minimum="0" maximum="2147483647"/>    
+      <attribute id="16" name="liste_monstre"/>      
+      <multiplicity id="17" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
