@@ -14,11 +14,13 @@ public class JeuPerso implements Jeu {
 	 * le personnage du jeu
 	 */
 	private static Personnage pj;
-
+	
+	ArrayList<Monstre>
 
 	/**
 	 * constructeur de jeu avec un Personnage
 	 */
+	
 	public JeuPerso() {
 		this.pj=new Personnage();
 	}
