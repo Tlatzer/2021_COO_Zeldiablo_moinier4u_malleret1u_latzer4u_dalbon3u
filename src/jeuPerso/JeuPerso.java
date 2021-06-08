@@ -27,6 +27,7 @@ public class JeuPerso implements Jeu {
 		this.liste_monstre = new ArrayList<Monstre>();
 		Monstre m = new Monstre(5,3);
 		if(( this.pj.getLabyrinthe().getEmplacement(m.getX(), m.getY()))== 0)
+			this.pj.getLabyrinthe().setLabyrinthe(5, 3, 4);
 			this.liste_monstre.add(m);
 	}
 
