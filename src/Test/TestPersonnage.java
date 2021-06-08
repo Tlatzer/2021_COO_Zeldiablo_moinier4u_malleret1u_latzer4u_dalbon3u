@@ -14,9 +14,9 @@ public class TestPersonnage {
 		
 		JeuPerso jeu = new JeuPerso();
 		Personnage pers = JeuPerso.getPj();
-		Labyrinthe lab = JeuPerso.getLabyrinthe();
+		Labyrinthe lab = jeu.getLabyrinthe();
 		
-		int res = lab.getEmplacement(2,0);
+		int res = lab.getEmplacement(2,2);
 		
 		assertEquals("Le Personnage devrait être sur une case libre", res, 0);
 		
@@ -27,11 +27,11 @@ public class TestPersonnage {
 		
 		JeuPerso jeu = new JeuPerso();
 		Personnage pers = JeuPerso.getPj();
-		Labyrinthe lab = JeuPerso.getLabyrinthe();
+		Labyrinthe lab = jeu.getLabyrinthe();
 		
-		int res = lab.getEmplacement(2,2);
+		int res = lab.getEmplacement(2,0);
 		
-		assertEquals("Le Personnage devrait être sur une case libre", res, 1);
+		assertEquals("Le Personnage devrait ne pas être sur une case libre", res, 1);
 		
 	}
 	
