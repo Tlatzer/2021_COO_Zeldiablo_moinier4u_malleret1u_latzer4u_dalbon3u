@@ -1,5 +1,5 @@
 @startuml
-title Construction d'un jeu avec labyrinthe
+title Construction d'un jeu avec monstre
 
 participant "DessinPerso" as dp
 participant "jp:JeuPerso" as jp
