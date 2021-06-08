@@ -62,7 +62,7 @@ public class DessinPerso implements DessinJeu {
 					TAILLE_CASE);
 			break;
 		case "PIEGE":
-			crayon.setColor(Color.red);
+			crayon.setColor(Color.orange);
 			crayon.fillRect(x * TAILLE_CASE, y * TAILLE_CASE, TAILLE_CASE,
 					TAILLE_CASE);
 			break;
