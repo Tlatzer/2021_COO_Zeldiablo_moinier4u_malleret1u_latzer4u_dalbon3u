@@ -29,7 +29,7 @@ class Monstre {
 -degats:int
 -x:int
 -y:int
-+Monstre()
++Monstre(int x, int y)
 +getDegats()
 +getPv()
 +getX()

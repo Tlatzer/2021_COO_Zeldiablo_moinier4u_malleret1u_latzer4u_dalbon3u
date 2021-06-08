@@ -1,5 +1,7 @@
 package jeuPerso;
 
+import java.util.ArrayList;
+
 import moteurJeu.Commande;
 import moteurJeu.Jeu;
 
@@ -14,13 +16,19 @@ public class JeuPerso implements Jeu {
 	 * le personnage du jeu
 	 */
 	private static Personnage pj;
-
+	
+	ArrayList<Monstre> liste_monstre;
 
 	/**
 	 * constructeur de jeu avec un Personnage
 	 */
+	
 	public JeuPerso() {
 		this.pj=new Personnage();
+		this.liste_monstre = new ArrayList<Monstre>();
+		Monstre m = new Monstre(3,3);
+		if(this.pj.getLabyrinthe().getEmplacement(3, 3)== 0)
+			this.liste_monstre.add(new Monstre(3,3));
 	}
 
 	/**
