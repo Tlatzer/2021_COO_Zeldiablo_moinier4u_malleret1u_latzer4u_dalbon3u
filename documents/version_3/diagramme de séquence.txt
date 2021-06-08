@@ -1,7 +1,6 @@
 @startuml
 title les colisions entre le personnage et le labyrinthe
 
-'''participant "DessinPerso" as dp
 participant "jp:JeuPerso" as jp
 participant "p:Personnage" as p
 participant "lab:Labyrinthe" as lab
