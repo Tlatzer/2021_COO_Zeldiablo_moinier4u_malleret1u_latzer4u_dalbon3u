@@ -27,9 +27,13 @@ class Personnage{
 class Monstre {
 -pv:int
 -degats:int
+-x:int
+-y:int
 +Monstre()
 +getDegats()
 +getPv()
++getX()
++getY()
 }
 
 Personnage "1" --> "1" Labyrinthe : +lab
