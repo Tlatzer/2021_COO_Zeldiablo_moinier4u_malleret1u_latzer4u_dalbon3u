@@ -61,6 +61,7 @@ public class Labyrinthe {
 	public int[][] getLabyrinthe(){
 		return this.labyrinthe;
 	}
+	
 
 	public int getTaille(){
 		return this.labyrinthe.length;
