@@ -1,0 +1,42 @@
+Répartitions des fonctionnalités : Version 3 
+
+
+
+* fonctionnalités
+
+- Fonctionnalité 1.5 : Case Piégées
+- Reponsable: moinier4u
+- Diagramme de Sequence: Diagramme_Sequence_DegatCase.PNG
+
+- Fonctionnalité 1.4 : Cases déclencheur
+- Reponsable: latzer4u
+- Diagramme de Sequence: Diagramme_Sequence.png
+
+
+- Fonctionnalité 1.3 : Gestion des niveaux
+- Reponsable: malleret1u
+- Diagramme de Sequence: DiagrammeSequence_Niveaux.PNG
+
+
+- Fonctionnalité 2.1 : Génération de monstres immobiles
+- Reponsable: dalbon3u
+- Diagramme de Sequence: DiagrammeSequence_monstre.png
+
+
+
+* réalisation
+
+- Personnage : public int degatCase();
+- Responsable : moinier4u
+
+- Personnage : public void deplacer(Commande c);
+- Responsable : latzer4u
+
+- Labyrinthe : public Labyrinthe(String level);
+- Responsable : malleret1u
+
+- Monstre : Initialisation de la classe;
+- Responsable : dalbon3u
+
+
+
