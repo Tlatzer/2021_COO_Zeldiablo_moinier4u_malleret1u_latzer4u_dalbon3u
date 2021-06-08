@@ -37,35 +37,28 @@ public class Personnage {
 	 *            la chaine permettant de deplacer le personnage (N,S, E ou O)
 	 */
 	public void deplacer(Commande c) {
-
+		int type = -1;
 		if (c.gauche) {
-			if(lab.getEmplacement(this.x-1,this.y)==0) this.x--;
-			if (this.x < 0) {
-				this.x = 0;
-			}
+			type = lab.getEmplacement(this.x-1,this.y);
+			if(type==0 || type==2) this.x--;
 		}
 
 		if (c.droite) {
-			if(lab.getEmplacement(this.x+1,this.y)==0) this.x++;
-			if (this.x >LIMIT_X) {
-				this.x = LIMIT_X;
-			}
-
+			type = lab.getEmplacement(this.x+1,this.y);
+			if(type==0 || type==2) this.x++;
 		}
 
 		if (c.bas) {
-			if(lab.getEmplacement(this.x,this.y+1)==0) this.y++;
-			if (this.y >LIMIT_Y) {
-				this.y = LIMIT_Y;
-			}
+			type = lab.getEmplacement(this.x,this.y+1);
+			if(type==0 || type==2) this.y++;
 		}
 
 		if (c.haut) {
-			if(lab.getEmplacement(this.x,this.y-1)==0) this.y--;
-			if (this.y < 0) {
-				this.y = 0;
-			}
+			type = lab.getEmplacement(this.x,this.y-1);
+			if(type==0 || type==2) this.y--;
 		}
+
+		if(type == 2) lab.teleportation(this);
 	}
 
 	public String toString() {
