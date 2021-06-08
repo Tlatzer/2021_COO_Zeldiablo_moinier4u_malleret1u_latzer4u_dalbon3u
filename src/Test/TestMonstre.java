@@ -4,6 +4,9 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import jeuPerso.JeuPerso;
+import jeuPerso.Personnage;
+
 public class TestMonstre {
 
 	/**
@@ -22,5 +25,22 @@ public class TestMonstre {
 		
 		assertEquals("le jeu devrait crÃ©er un monstre seulement",1,res);
 	}
-
+	
+	@Test
+	public void testCreationMonstreDansUnMur() {
+		
+		//preparation des donnees
+		Personnage pj = new Personnage();
+		Monstre m = new Monstre(6,5);
+		
+		
+		//methode testee
+		int a = pj.getLabyrinthe().getEmplacement(6, 5);
+		
+		//verification
+		
+		assertEquals("Le monstre devrait etre créait", 1, a);
+		
+		
+	}
 }

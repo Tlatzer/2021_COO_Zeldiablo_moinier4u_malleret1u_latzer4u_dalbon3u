@@ -36,6 +36,7 @@ public class Labyrinthe {
 	}
 
 	public Labyrinthe(String level) {
+		this.labyrinthe = new int[16][16];
 
 		switch (level) {
 			case "lvl 1":
