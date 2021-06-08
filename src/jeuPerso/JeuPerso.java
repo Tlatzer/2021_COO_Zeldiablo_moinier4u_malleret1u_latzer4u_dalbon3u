@@ -15,7 +15,7 @@ public class JeuPerso implements Jeu {
 	/**
 	 * le personnage du jeu
 	 */
-	private static Personnage pj;
+	private Personnage pj;
 	
 	private ArrayList<Monstre> liste_monstre;
 
@@ -60,7 +60,7 @@ public class JeuPerso implements Jeu {
 	 *
 	 * @return personnage du jeu
 	 */
-	public static Personnage getPj() {
+	public Personnage getPj() {
 		return pj;
 	}
 
