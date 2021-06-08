@@ -20,7 +20,7 @@ class Personnage{
   +y:int
   +LIMIT_X:int
   +LIMIT_Y:int
-  +Personnage
+  +Personnage()
   +deplacer(Commande c)
   +toString()
 }
