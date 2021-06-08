@@ -1,0 +1,21 @@
+@startuml
+title Construction d'un jeu avec labyrinthe
+
+participant "DessinPerso" as dp
+participant "jp:JeuPerso" as jp
+participant "p:Personnage" as p
+participant "l:Labyrinthe" as l
+participant "m:Monstre" as m
+
+create jp
+dp->jp :new
+
+create p
+jp->p:new
+
+create l
+p->l:new
+
+create m 
+jp->m:new
+@enduml
