@@ -1,5 +1,5 @@
 package jeuPerso;
-
+import java.util.*;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
@@ -54,6 +54,11 @@ public class DessinPerso implements DessinJeu {
 			crayon.fillRect(x * TAILLE_CASE, y * TAILLE_CASE, TAILLE_CASE,
 					TAILLE_CASE);
 			break;
+		case "TP":
+			crayon.setColor(Color.cyan);
+			crayon.fillRect(x * TAILLE_CASE, y * TAILLE_CASE, TAILLE_CASE,
+					TAILLE_CASE);
+			break;
 		default:
 			throw new AssertionError("objet inexistant");
 		}
@@ -74,6 +79,9 @@ public class DessinPerso implements DessinJeu {
 					this.dessinerObjet("MUR", i, j, im);
 				}
 
+				if (jeu.getLabyrinthe().getEmplacement(i,j)==2 ) {
+					this.dessinerObjet("TP", i, j, im);
+				}
 
 			}
 
