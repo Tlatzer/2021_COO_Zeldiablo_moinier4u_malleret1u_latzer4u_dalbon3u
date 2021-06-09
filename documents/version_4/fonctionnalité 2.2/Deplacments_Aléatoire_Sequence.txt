@@ -1,0 +1,26 @@
+@startuml
+
+title Déplacements Aléatoire du Monstre
+
+
+participant "jp : JeuPerso" as jeu
+participant "mon : Monstre" as mon
+
+[->jeu
+activate jeu
+
+jeu->mon : evoluer(Commande commande)
+    activate mon
+        activate mon 
+            mon->mon : deplacerAleatoire(Labyrinthe lab)
+        deactivate mon
+        mon-->jeu
+    deactivate mon
+
+
+
+jeu-->[
+deactivate jeu
+
+
+@enduml
