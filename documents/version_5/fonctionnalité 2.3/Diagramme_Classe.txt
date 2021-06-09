@@ -1,0 +1,63 @@
+@startuml
+title Monstres attirés par le Héros
+class Labyrinthe{
+  -labyrinthe:int[][]
+  +Labyrinthe()
+  +Labyrinthe(String level)
+  +getEmplacement(int x,int y):int
+  +teleportation(Joueur j)
+  +getLabyrinthe():int[][]
+  +getTaille():int
+  +setLabyrinthe(int x, int y, int num)
+}
+
+class JeuPerso{
+  +JeuPerso()
+  +JeuPerso(String lvl)
+  +toString()
+  +evoluer(Commande commande)
+  +etreFini()
+  +getPj()
+  +getLabyrinthe():Labyrinthe
+  +getListeMonstre():ArrayList<Monstre>
+}
+
+class Personnage{
+  +x:int
+  +y:int
+  +pv:int
+  +LIMIT_X:int
+  +LIMIT_Y:int
+  +Personnage()
+  +Personnage(String lvl, Labyrinthe lab)
+  +deplacer(Commande c)
+  +degatCase():int
+  +toString()
+}
+
+class DessinPerso{
+  -TAILLE_CASE:int
+  +DessinPerso(JeuPerso j)
+  +dessinerObjet(String s, int x, int y, BufferedImage im)
+  +dessiner(BufferedImage im)
+}
+
+class Monstre{
+  -pv:int
+  -degats:int
+  -x:int
+  -y:int
+  +Monstre(int abs, int ord)
+  +deplacerProcheHero()
+  +toString():String
+  +getPv():int
+  +getDegats():int
+  +getX():int
+  +getY():int
+}
+
+DessinPerso "1" --> "1" JeuPerso : -jeu
+JeuPerso "1" --> "0..1" Personnage : -pj
+JeuPerso "1" --> "*" Monstre : -liste_monstre
+JeuPerso "1" --> "1" Labyrinthe : -labyrinthe
+@enduml

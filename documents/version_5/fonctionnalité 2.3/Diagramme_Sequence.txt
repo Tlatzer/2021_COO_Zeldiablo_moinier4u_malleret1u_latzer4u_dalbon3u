@@ -1,0 +1,22 @@
+@startuml
+
+title Deplacement du Monstre en fonction du Joueur
+
+participant "jp:JeuPerso" as jp
+participant "m:Monstre" as m
+participant "lab:Labyrinthe" as lab
+
+[->jp :evoluer(commande)
+activate jp
+    jp->m :deplacerProcheHero()
+    activate m
+        m->lab :getEmplacement(x,y)
+        activate lab
+            lab-->m: val
+        deactivate lab
+    m-->jp
+    deactivate m
+jp-->[
+deactivate jp
+
+@enduml
