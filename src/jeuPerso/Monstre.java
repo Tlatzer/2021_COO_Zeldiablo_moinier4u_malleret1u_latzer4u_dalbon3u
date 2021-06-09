@@ -37,6 +37,34 @@ public class Monstre {
 		this.y = ord;
 	}
 	
+	
+	
+	
+	public void deplacerAleatoire(Labyrinthe lab){
+		//si aucune direction n'est defini alors on lui en met une aleatoire
+		int type = -1;
+		int cote =(int) (Math.random()*4);
+		switch(cote) {
+			case 0:
+					type = lab.getEmplacement(this.x,this.y-1);
+					if(type==0 || type==2 || type == 3) this.y--;
+				break;
+			case 1:
+					type = lab.getEmplacement(this.x,this.y+1);
+					if(type==0 || type==2 || type == 3) this.y++;
+				break;
+			case 2 :
+					type = lab.getEmplacement(this.x-1,this.y);
+					if(type==0 || type==2 || type == 3) this.x--;
+				break;
+			case 3 :
+					type = lab.getEmplacement(this.x+1,this.y);
+					if(type==0 || type==2 || type == 3) this.x++;
+				break;
+			}
+	}
+	
+	
 /**
  * 	methode qui retourne les degats et les pv 
  * @return le nombre de pv et de degats dans un String 

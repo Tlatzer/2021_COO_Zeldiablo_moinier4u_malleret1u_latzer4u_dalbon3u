@@ -62,6 +62,10 @@ public class JeuPerso implements Jeu {
 	 */
 	public void evoluer(Commande commande) {
 		this.getPj().deplacer(commande, this.labyrinthe);
+		
+		for (int i = 0; i < liste_monstre.size(); i++) {
+			this.liste_monstre.get(i).deplacerAleatoire(this.labyrinthe);
+		}
 
 	}
 
