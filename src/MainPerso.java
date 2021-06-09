@@ -22,6 +22,10 @@ public class MainPerso {
 	 * @throws InterruptedException en cas de soucis de methode thread.sleep()
 	 */
 	public static void main(String[] args) throws InterruptedException {
+
+		//création du scanner
+		Scanner sc = new Scanner(System.in);
+
 		// creation du jeu particulier et de son afficheur
 		JeuPerso jeu = new JeuPerso();
 		DessinPerso aff = new DessinPerso(jeu);
@@ -34,7 +38,7 @@ public class MainPerso {
 
 		// lorsque le jeu est fini
 		System.out.println("Fin du Jeu - appuyer sur entree");
-		Scanner sc = new Scanner(System.in);
+		
 		sc.nextLine();
 		System.exit(1);
 		
