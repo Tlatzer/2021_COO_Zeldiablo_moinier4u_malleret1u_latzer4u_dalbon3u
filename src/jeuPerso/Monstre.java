@@ -1,7 +1,7 @@
 package jeuPerso;
 
 /**
- * 
+ *
  * Classe modelisant un monstre
  *
  */
@@ -11,24 +11,24 @@ public class Monstre {
  * Nombre de points de vie d'un monstre
  */
 	private int pv;
-	
+
 /**
  * Nombre degats d'attaque d'un monstre
  */
 	private int degats;
 
 /**
-* Coordonnes du monstre en x 
+* Coordonnes du monstre en x
 */
 	private int x;
-	
+
 /**
 * Coordonnes du monstre en y
  */
 	private int y;
-	
+
 /**
- * Construction d'un monstre 
+ * Construction d'un monstre
  */
 	public Monstre(int abs, int ord) {
 		this.pv = 10;
@@ -36,10 +36,11 @@ public class Monstre {
 		this.x = abs;
 		this.y = ord;
 	}
-	
-	
-	
-	
+
+
+	/**
+ 	 * Methode qui permet au Monstre de se deplacer aleatoirement dans le labyrinthe
+	 */
 	public void deplacerAleatoire(Labyrinthe lab){
 		//si aucune direction n'est defini alors on lui en met une aleatoire
 		int type = -1;
@@ -63,11 +64,40 @@ public class Monstre {
 				break;
 			}
 	}
-	
-	
+
+
+	/**
+ 	 * Methode qui permet au Monstre de se rapprocher du Joueur
+	 */
+	public void deplacerProcheHero(Labyrinthe l, Personnage h){
+		int type = -1;
+		int distXAbs, distYAbs;
+		int distX = this.x - h.x;
+		int distY = this.y - h.y;
+		if(distX < 0) distXAbs = -distX; else distXAbs = distX;
+		if(distY < 0) distYAbs = -distY; else distYAbs = distY;
+		if(distXAbs>distYAbs){
+			if(distX>0){
+				type = l.getEmplacement(this.x-1,this.y);
+				if(type==0 || type==2 || type == 3) this.x--;
+			}else{
+				type = l.getEmplacement(this.x+1,this.y);
+				if(type==0 || type==2 || type == 3) this.x++;
+			}
+		}else{
+			if(distY>0){
+				type = l.getEmplacement(this.x,this.y-1);
+				if(type==0 || type==2 || type == 3) this.y--;
+			}else{
+				type = l.getEmplacement(this.x,this.y+1);
+				if(type==0 || type==2 || type == 3) this.y++;
+			}
+		}
+	}
+
 /**
- * 	methode qui retourne les degats et les pv 
- * @return le nombre de pv et de degats dans un String 
+ * 	methode qui retourne les degats et les pv
+ * @return le nombre de pv et de degats dans un String
  */
 	public String toString() {
 		return("Points de vie "+this.pv+" Degats: "+this.degats);
@@ -79,10 +109,10 @@ public class Monstre {
 	public int getPv() {
 		return this.pv;
 	}
-	
+
 /**
  * Getter de degats
- * @return le nombre de degats 
+ * @return le nombre de degats
  */
 	public int getDegats() {
 		return this.degats;
@@ -102,6 +132,6 @@ public class Monstre {
 	public int getY() {
 		return this.y;
 	}
-	
-	
+
+
 }

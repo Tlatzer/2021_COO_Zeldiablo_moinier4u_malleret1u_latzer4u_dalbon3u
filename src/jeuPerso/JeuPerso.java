@@ -66,7 +66,8 @@ public class JeuPerso implements Jeu {
 		this.getPj().deplacer(commande, this.labyrinthe);
 		if(this.dep==0){
 			for (int i = 0; i < liste_monstre.size(); i++) {
-				this.liste_monstre.get(i).deplacerAleatoire(this.labyrinthe);
+				//this.liste_monstre.get(i).deplacerAleatoire(this.labyrinthe);
+				this.liste_monstre.get(i).deplacerProcheHero(this.labyrinthe, this.pj);
 			}
 		}
 		dep++;
