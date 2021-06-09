@@ -79,18 +79,26 @@ public class Monstre {
 		if(distXAbs>distYAbs){
 			if(distX>0){
 				type = l.getEmplacement(this.x-1,this.y);
-				if(type==0 || type==2 || type == 3) this.x--;
+				if(this.x-1!=h.x || this.y!=h.y){
+					if(type==0 || type==2 || type == 3) this.x--;
+				}
 			}else{
 				type = l.getEmplacement(this.x+1,this.y);
-				if(type==0 || type==2 || type == 3) this.x++;
+				if(this.x+1!=h.x || this.y!=h.y){
+					if(type==0 || type==2 || type == 3) this.x++;
+				}
 			}
 		}else{
 			if(distY>0){
 				type = l.getEmplacement(this.x,this.y-1);
-				if(type==0 || type==2 || type == 3) this.y--;
+				if(this.x!=h.x || this.y-1!=h.y){
+					if(type==0 || type==2 || type == 3) this.y--;
+				}
 			}else{
 				type = l.getEmplacement(this.x,this.y+1);
-				if(type==0 || type==2 || type == 3) this.y++;
+				if(this.x!=h.x || this.y+1!=h.y){
+					if(type==0 || type==2 || type == 3) this.y++;
+				}
 			}
 		}
 	}
