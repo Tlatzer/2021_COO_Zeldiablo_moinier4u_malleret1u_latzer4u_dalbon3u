@@ -1,0 +1,52 @@
+@startuml
+title Colision entre joueur et monstre
+class Labyrinthe{
+  -labyrinthe:int[][]
+  +Labyrinthe()
+  +getEmplacement(int x,int y):int
+  +getLabyrinthe():int[][]
+  +getTaille():int
+  +teleportation(Joueur j)
+  +setLabyrinthe(int x, int y, int num)
+}
+
+
+class JeuPerso{
+  +JeuPerso()
+  +toString()
+  +evoluer(Commande commande)
+  +etreFini()
+  +getPj()
+  +getLabyrinthe()
+}
+class Monstre {
+-pv:int
+-degats:int
+-x:int
+-y:int
++Monstre(int abs, int ord)
++getDegats()
++getPv()
++toString()
++getX()
++getY()
+}
+
+class Personnage{
+  +x:int
+  +y:int
+  +lab:Labyrinthe
+  +LIMIT_X:int
+  +LIMIT_Y:int
+  +Personnage()
+  +deplacer(Commande c, Labyrinthe l)
+  +toString()
+  +getLabyrinthe()
+}
+
+
+
+JeuPerso "1" --> "*" Monstre:-liste_monstre
+JeuPerso "1" --> "1" Labyrinthe : -lab
+JeuPerso "1" --> "0..1" Personnage : -pj
+@enduml
