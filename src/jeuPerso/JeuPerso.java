@@ -21,6 +21,8 @@ public class JeuPerso implements Jeu {
 
 	private Labyrinthe labyrinthe;
 
+	private static int dep=0;
+
 	/**
 	 * constructeur de jeu avec un Personnage
 	 */
@@ -62,11 +64,13 @@ public class JeuPerso implements Jeu {
 	 */
 	public void evoluer(Commande commande) {
 		this.getPj().deplacer(commande, this.labyrinthe);
-		
-		for (int i = 0; i < liste_monstre.size(); i++) {
-			this.liste_monstre.get(i).deplacerAleatoire(this.labyrinthe);
+		if(this.dep==0){
+			for (int i = 0; i < liste_monstre.size(); i++) {
+				this.liste_monstre.get(i).deplacerAleatoire(this.labyrinthe);
+			}
 		}
-
+		dep++;
+		if(dep>5) dep=0;
 	}
 
 	@Override
