@@ -35,14 +35,14 @@ public class TestMonstre {
 	public void testCreationMonstreDansUnMur() {
 		
 		//preparation des donnees
-		Personnage pj = new Personnage();
+
 		JeuPerso jeu = new JeuPerso();
 		Monstre m = new Monstre(6,5);
 		jeu.getListeMonstre().add(m);
 		
 		
 		//methode testee
-		int a = pj.getLabyrinthe().getEmplacement(6, 5);
+		int a = jeu.getLabyrinthe().getEmplacement(6, 5);
 		
 		//verification
 		
@@ -58,18 +58,34 @@ public class TestMonstre {
 	public void testCreationMonstreDansCasesVides() {
 		
 		//preparation des donnees
-		Personnage pj = new Personnage();
 		JeuPerso jeu = new JeuPerso();
 		Monstre m = new Monstre(5,5);
 		jeu.getListeMonstre().add(m);
 		
 		
 		//methode testee
-		int a = pj.getLabyrinthe().getEmplacement(5, 5);
+		int a = jeu.getLabyrinthe().getEmplacement(5, 5);
 		
 		//verification
 		
 		assertEquals("Le monstre ne devrait pas etre créait", 0, a);
+		
+		
+	}
+	
+	@Test
+	public void testColisionMonstreJoueur() {
+		
+		//preparation des donnees
+		Monstre m = new Monstre(6,7);
+		JeuPerso jeu = new JeuPerso();
+		
+		//methode testee
+		jeu.getLabyrinthe().setLabyrinthe(6, 7, 4); // 4 car c'est un monstre
+		
+		
+		//verification
+		assertEquals("le monstre ne devrait pas etre en colision avec le joueur",4, jeu.getLabyrinthe().getEmplacement(6, 7));
 		
 		
 	}
