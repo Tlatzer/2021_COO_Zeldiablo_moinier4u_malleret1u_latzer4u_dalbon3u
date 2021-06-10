@@ -5,20 +5,16 @@ title Déplacements Aléatoire du Monstre
 
 participant "jp : JeuPerso" as jeu
 participant "mon : Monstre" as mon
+participant "lab ; Labyrinthe" as lab
 
-[->jeu
+[->jeu : evoluer(Commande commande)
 activate jeu
-
-jeu->mon : evoluer(Commande commande)
-    activate mon
+    jeu->mon : deplacerAleatoire(Labyrinthe lab)
         activate mon 
-            mon->mon : deplacerAleatoire(Labyrinthe lab)
+            mon->lab : getEmplacement(x,y)
+            lab-->mon
+            mon-->jeu
         deactivate mon
-        mon-->jeu
-    deactivate mon
-
-
-
 jeu-->[
 deactivate jeu
 
