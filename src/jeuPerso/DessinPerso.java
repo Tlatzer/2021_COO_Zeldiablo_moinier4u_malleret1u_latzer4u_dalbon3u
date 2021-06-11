@@ -3,6 +3,8 @@ import java.util.*;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
+import java.awt.Image;
+import javax.swing.ImageIcon;
 import java.util.ArrayList;
 
 import moteurJeu.DessinJeu;
@@ -40,21 +42,25 @@ public class DessinPerso implements DessinJeu {
 	 */
 	private void dessinerObjet(String s, int x, int y, BufferedImage im) {
 		Graphics2D crayon = (Graphics2D) im.getGraphics();
+		Image image;
 		switch (s) {
 		case "PJ":
 			crayon.setColor(Color.blue);
 			crayon.fillOval(x * TAILLE_CASE, y * TAILLE_CASE, TAILLE_CASE,
-					TAILLE_CASE);
+			TAILLE_CASE);
 			break;
 		case "MONSTRE":
-			crayon.setColor(Color.RED);
+			crayon.setColor(Color.red);
 			crayon.fillOval(x * TAILLE_CASE, y * TAILLE_CASE, TAILLE_CASE,
 			TAILLE_CASE);
 			break;
+		case "SOL":
+			image = new ImageIcon(getClass().getResource("/Image/sol.jpg")).getImage();
+			crayon.drawImage(image, x*TAILLE_CASE , y*TAILLE_CASE , null);
+			break;
 		case "MUR":
-			crayon.setColor(Color.gray);
-			crayon.fillRect(x * TAILLE_CASE, y * TAILLE_CASE, TAILLE_CASE,
-					TAILLE_CASE);
+			image = new ImageIcon(getClass().getResource("/Image/murs.jpg")).getImage();
+			crayon.drawImage(image, x*TAILLE_CASE , y*TAILLE_CASE , null);
 			break;
 		case "TP":
 			crayon.setColor(Color.cyan);
@@ -81,6 +87,9 @@ public class DessinPerso implements DessinJeu {
 		for (int i=0;i<jeu.getLabyrinthe().getTaille();i++) {
 
 			for (int j=0;j<jeu.getLabyrinthe().getTaille();j++) {
+				if (jeu.getLabyrinthe().getEmplacement(i,j)==0 ) {
+					this.dessinerObjet("SOL", i, j, im);
+				}
 
 				if (jeu.getLabyrinthe().getEmplacement(i,j)==1 ) {
 					this.dessinerObjet("MUR", i, j, im);

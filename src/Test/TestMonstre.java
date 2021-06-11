@@ -9,6 +9,7 @@ import org.junit.Test;
 import jeuPerso.JeuPerso;
 import jeuPerso.Monstre;
 import jeuPerso.Personnage;
+import jeuPerso.Troll;
 
 public class TestMonstre {
 
@@ -37,7 +38,7 @@ public class TestMonstre {
 		//preparation des donnees
 
 		JeuPerso jeu = new JeuPerso();
-		Monstre m = new Monstre(6,5);
+		Monstre m = new Troll(6,5);
 		jeu.getListeMonstre().add(m);
 		
 		
@@ -59,7 +60,7 @@ public class TestMonstre {
 		
 		//preparation des donnees
 		JeuPerso jeu = new JeuPerso();
-		Monstre m = new Monstre(5,5);
+		Monstre m = new Troll(5,5);
 		jeu.getListeMonstre().add(m);
 		
 		
@@ -77,7 +78,7 @@ public class TestMonstre {
 	public void testColisionMonstreJoueur() {
 		
 		//preparation des donnees
-		Monstre m = new Monstre(6,7);
+		Monstre m = new Troll(6,7);
 		JeuPerso jeu = new JeuPerso();
 		
 		//methode testee
@@ -89,4 +90,21 @@ public class TestMonstre {
 		
 		
 	}
+	
+	@Test
+	public void testAttaquer() {
+		Personnage pers = new Personnage();
+		Monstre m =  new Troll(6,7);
+		JeuPerso jeu = new JeuPerso();
+		
+		int res = m.attaquer(pers);
+		
+		assertEquals("Le personnage devrait avoir 80 pv", 80, res);
+		
+		
+		
+	}
+	
+	
+	
 }

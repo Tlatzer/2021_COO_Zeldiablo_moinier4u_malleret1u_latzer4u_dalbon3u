@@ -1,0 +1,25 @@
+Répartitions des fonctionnalités : Version 5
+
+-- DAL BON Quentin absent
+
+* fonctionnalités
+
+- Fonctionnalité 2.3 : Deplacements En Fonction du Joueur
+- Reponsable: latzer4u
+- Diagramme de Sequence: Diagramme_Sequence.png
+
+- Fonctionnalité 3.3 : Collision avec un monstre
+- Reponsable: moinier4u
+- Diagramme de Classe : Modification_Troll_Monstre_Classe.PNG
+
+
+
+
+* réalisation
+
+- Troll : Classe entière;
+- Responsable : moinier4u
+
+- Monstre : public void deplacerProcheHero(Labyrinthe l, Personnage h);
+- Responsable : latzer4u
+

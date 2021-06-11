@@ -29,10 +29,10 @@ public class JeuPerso implements Jeu {
 	public JeuPerso() {
 		this.pj=new Personnage();
 		this.liste_monstre = new ArrayList<Monstre>();
-		Monstre m = new Monstre(5,3);
+		Monstre m = new Troll(5,3);
 		this.labyrinthe = new Labyrinthe();
 		if(( this.labyrinthe.getEmplacement(m.getX(), m.getY()))== 0)
-			this.labyrinthe.setLabyrinthe(5, 3, 4);
+			//this.labyrinthe.setLabyrinthe(5, 3, 5);
 			this.liste_monstre.add(m);
 	}
 
@@ -42,7 +42,7 @@ public class JeuPerso implements Jeu {
 	public JeuPerso(String lvl) {
 		this.pj=new Personnage(lvl);
 		this.liste_monstre = new ArrayList<Monstre>();
-		Monstre m = new Monstre(5,3);
+		Monstre m = new Troll(5,3);
 		this.labyrinthe = new Labyrinthe();
 		if(( this.labyrinthe.getEmplacement(m.getX(), m.getY()))== 0)
 			this.liste_monstre.add(m);
@@ -66,6 +66,7 @@ public class JeuPerso implements Jeu {
 		this.getPj().deplacer(commande, this.labyrinthe);
 		if(this.dep==0){
 			for (int i = 0; i < liste_monstre.size(); i++) {
+				//if(this.liste_monstre.get(i).equals())
 				//this.liste_monstre.get(i).deplacerAleatoire(this.labyrinthe);
 				this.liste_monstre.get(i).deplacerProcheHero(this.labyrinthe, this.pj);
 			}

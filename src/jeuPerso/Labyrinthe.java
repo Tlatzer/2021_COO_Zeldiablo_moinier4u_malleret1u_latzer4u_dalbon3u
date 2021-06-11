@@ -156,6 +156,8 @@ public class Labyrinthe {
 	 *  - 1 mur
 	 *  - 2 case de teleportation
 	 *  - 3 case de degats
+	 *  - 4 Troll
+	 *  - 5 Fantome
 	 */
 	public int getEmplacement(int x, int y) {
 		int res = 0;
@@ -173,6 +175,10 @@ public class Labyrinthe {
 		
 		if(this.labyrinthe[x][y] == 4)
 			res = 4;
+		
+		if(this.labyrinthe[x][y] == 5)
+			res = 5;
+		
 
 		return res;
 	}
