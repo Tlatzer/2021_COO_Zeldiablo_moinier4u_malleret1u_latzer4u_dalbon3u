@@ -38,15 +38,13 @@ public abstract class  Monstre {
 		
 	}
 
-<<<<<<< HEAD
+
 	/**
 	 * Méthode qui enlève des points de vie au Personnage
 	 * @param pers
 	 */
 	public abstract void attaquer(Personnage pers);
 	
-=======
->>>>>>> 37da7258de74692e4173f20138603bb78c9f523c
 
 	/**
  	 * Methode qui permet au Monstre de se deplacer aleatoirement dans le labyrinthe

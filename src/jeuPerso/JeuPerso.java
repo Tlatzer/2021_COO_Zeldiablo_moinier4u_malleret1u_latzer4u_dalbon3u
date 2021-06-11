@@ -29,7 +29,7 @@ public class JeuPerso implements Jeu {
 	public JeuPerso() {
 		this.pj=new Personnage();
 		this.liste_monstre = new ArrayList<Monstre>();
-		Monstre m = new Fantome(5,3);
+		Monstre m = new Fantome(5,3,50);
 		this.labyrinthe = new Labyrinthe();
 		if(( this.labyrinthe.getEmplacement(m.getX(), m.getY()))== 0)
 			this.labyrinthe.setLabyrinthe(5, 3, 5);
@@ -42,7 +42,7 @@ public class JeuPerso implements Jeu {
 	public JeuPerso(String lvl) {
 		this.pj=new Personnage(lvl);
 		this.liste_monstre = new ArrayList<Monstre>();
-		Monstre m = new Fantome(5,3);
+		Monstre m = new Fantome(5,3,50);
 		this.labyrinthe = new Labyrinthe();
 		if(( this.labyrinthe.getEmplacement(m.getX(), m.getY()))== 0)
 			this.liste_monstre.add(m);
