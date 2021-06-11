@@ -43,7 +43,7 @@ public abstract class  Monstre {
 	 * Méthode qui enlève des points de vie au Personnage
 	 * @param pers
 	 */
-	public abstract void attaquer(Personnage pers);
+	public abstract int attaquer(Personnage pers);
 	
 
 	/**

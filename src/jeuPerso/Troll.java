@@ -15,8 +15,9 @@ public class Troll extends Monstre{
 	 * Méthode qui enlève 20 points de vie au Personnage
 	 * @param pers
 	 */
-	public void attaquer(Personnage pers) {
+	public int attaquer(Personnage pers) {
 		pers.pv -= 20;
+		return pers.pv;
 	}
 
 
