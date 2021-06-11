@@ -1,0 +1,93 @@
+@startuml
+title Ajout des Sprites
+class Labyrinthe{
+  -grid:int[][]
+  -taille:int
+  +Labyrinthe()
+  +Labyrinthe(int x,int y)
+  +init()
+  +generateMaze()
+  +generateMaze(Cell c)
+  +generateMaze(int x,int y)
+  +updateGrid()
+  +getEmplacement(int x,int y):int
+  +teleportation(Joueur j)
+  +getLabyrinthe():int[][]
+  +getTaille():int
+  +setLabyrinthe(int x, int y, int num)
+}
+class Cell{
+  -neighbors:ArrayList<Cell>
+  -visited:boolean
+  -wall:boolean
+  -open:boolean
+  +Cell(int x,int y)
+  +Cell(int x,int y,boolean is)
+  +addNeighbor(Cell c)
+  +isCellBellowNeighbor():boolean
+  +isCellRightNeighbor():boolean
+  +toString():String
+  +equals(Object o):boolean
+
+}
+
+class JeuPerso{
+  -dep:int
+  +JeuPerso()
+  +JeuPerso(String lvl)
+  +toString()
+  +evoluer(Commande commande)
+  +etreFini()
+  +getPj()
+  +getLabyrinthe():Labyrinthe
+  +getListeMonstre():ArrayList<Monstre>
+}
+
+class Personnage{
+  +x:int
+  +y:int
+  +pv:int
+  +LIMIT_X:int
+  +LIMIT_Y:int
+  +Personnage()
+  +deplacer(Commande c, Labyrinthe lab)
+  +degatCase():int
+  +toString()
+}
+
+class DessinPerso{
+  -TAILLE_CASE:int
+  +DessinPerso(JeuPerso j)
+  +dessinerObjet(String s, int x, int y, BufferedImage im)
+  +dessiner(BufferedImage im)
+}
+
+class Monstre{
+  -pv:int
+  -degats:int
+  -x:int
+  -y:int
+  +Monstre(int abs, int ord)
+  +attaquer(Personnage pers):int 
+  +deplacerAleatoire(Labyrinthe lab)
+  +deplacerProcheHero()
+  +toString():String
+  +getPv():int
+  +getDegats():int
+  +getX():int
+  +getY():int
+}
+
+class Troll{
+  +Troll()
+  +attaquer(Personnage p):int
+  +regeneration()
+}
+
+Labyrinthe"1" --> "0..*"Cell
+Monstre "1" <|-- "1" Troll
+DessinPerso "1" --> "1" JeuPerso : -jeu
+JeuPerso "1" --> "0..1" Personnage : -pj
+JeuPerso "1" --> "*" Monstre : -liste_monstre
+JeuPerso "1" --> "1" Labyrinthe : -labyrinthe
+@enduml

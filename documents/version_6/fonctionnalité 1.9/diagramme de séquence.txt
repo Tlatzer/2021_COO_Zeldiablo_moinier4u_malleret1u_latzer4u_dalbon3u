@@ -1,0 +1,25 @@
+@startuml
+title ajout des niveaux (ici création niveau 1)
+
+participant "DessinPerso" as dp
+participant "jp:JeuPerso" as jp
+participant "lab:Labyrinthe" as lab
+
+create jp
+dp->jp:create
+
+create lab
+jp->lab:create
+
+lab->lab:init
+activate lab
+deactivate lab
+
+lab->lab: generateMaze
+activate lab
+deactivate lab
+
+lab->lab:updateMaze
+activate lab
+deactivate lab
+@enduml
