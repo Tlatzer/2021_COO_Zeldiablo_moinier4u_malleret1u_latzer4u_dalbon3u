@@ -1,0 +1,19 @@
+@startuml
+
+title Troll méthode regeneration
+
+participant "tr : Troll" as tr
+participant "mon : Monstre" as mon
+
+[->tr: regeneration()
+    activate tr
+        tr->mon : setPv()
+        mon-->tr
+        tr->mon : getPv()
+        mon-->tr : int
+    deactivate tr
+
+tr->[
+
+
+@enduml

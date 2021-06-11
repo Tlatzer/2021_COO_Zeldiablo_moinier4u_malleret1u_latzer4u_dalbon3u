@@ -1,6 +1,6 @@
 Répartitions des fonctionnalités : Version 5
 
-
+-- DAL BON Quentin absent
 
 * fonctionnalités
 
@@ -22,3 +22,4 @@ Répartitions des fonctionnalités : Version 5
 
 - Monstre : public void deplacerProcheHero(Labyrinthe l, Personnage h);
 - Responsable : latzer4u
+
