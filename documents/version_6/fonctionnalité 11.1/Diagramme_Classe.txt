@@ -1,5 +1,5 @@
 @startuml
-title Monstres attirés par le Héros
+title Ajout des Sprites
 class Labyrinthe{
   -labyrinthe:int[][]
   +Labyrinthe()
@@ -12,6 +12,7 @@ class Labyrinthe{
 }
 
 class JeuPerso{
+  -dep:int
   +JeuPerso()
   +JeuPerso(String lvl)
   +toString()
@@ -29,13 +30,14 @@ class Personnage{
   +LIMIT_X:int
   +LIMIT_Y:int
   +Personnage()
-  +Personnage(String lvl, Labyrinthe lab)
-  +deplacer(Commande c)
+  +Personnage(String lvl)
+  +deplacer(Commande c, Labyrinthe lab)
   +degatCase():int
   +toString()
 }
 
 class DessinPerso{
+  -image:Image
   -TAILLE_CASE:int
   +DessinPerso(JeuPerso j)
   +dessinerObjet(String s, int x, int y, BufferedImage im)
@@ -48,6 +50,8 @@ class Monstre{
   -x:int
   -y:int
   +Monstre(int abs, int ord)
+  +attaquer(Personnage pers)
+  +deplacerAleatoire(Labyrinthe lab)
   +deplacerProcheHero()
   +toString():String
   +getPv():int
