@@ -37,6 +37,13 @@ public abstract class Monstre {
 		this.y = ord;
 	}
 
+	
+	/**
+	 * Méthode qui enlève des points de vie au Personnage
+	 * @param pers
+	 */
+	public abstract void attaquer(Personnage pers);
+	
 
 	/**
  	 * Methode qui permet au Monstre de se deplacer aleatoirement dans le labyrinthe
