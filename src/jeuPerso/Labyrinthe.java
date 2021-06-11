@@ -204,6 +204,7 @@ public void updateGrid() {
 
   }
 }
+  grid[5][3] = 0;
 
   grid[6][7] = 0;
   grid[7][7] = 0;
