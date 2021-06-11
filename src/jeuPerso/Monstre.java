@@ -35,9 +35,9 @@ public abstract class Monstre {
 		this.degats = 2;
 		this.x = abs;
 		this.y = ord;
+		
 	}
 
-	
 	/**
 	 * Méthode qui enlève des points de vie au Personnage
 	 * @param pers
