@@ -1,0 +1,33 @@
+Répartitions des fonctionnalités : Version 4
+
+
+
+* fonctionnalités
+
+- Fonctionnalité 2.2 : Deplacements Aleatoire
+- Reponsable: moinier4u
+- Diagramme de Sequence: Deplacements_Aleatoire_Sequence.PNG
+
+- Fonctionnalité 3.1 : Collision avec un monstre
+- Reponsable: dalbon3u
+- Diagramme de Sequence: Diagramme de sequence_ColisionMonstre.png
+
+
+- Changement d'arborescence
+- Reponsable: malleret1u
+- Diagramme de Classe : Diagramme_Classe.png
+
+
+- Changement d'arborescence
+- Reponsable: latzer4u
+- Diagramme de Classe : Diagramme_Classe.png
+
+
+
+* réalisation
+
+- Monstre: public void deplacerAleatoire(Labyrinthe lab);
+- Responsable : moinier4u
+
+- JeuPerso: setLabyrinthe(x,y,4);
+- Responsable : dalbon3u
