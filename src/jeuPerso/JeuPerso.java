@@ -32,7 +32,7 @@ public class JeuPerso implements Jeu {
 		Monstre m = new Troll(5,3);
 		this.labyrinthe = new Labyrinthe();
 		if(( this.labyrinthe.getEmplacement(m.getX(), m.getY()))== 0)
-			this.labyrinthe.setLabyrinthe(5, 3, 5);
+			//this.labyrinthe.setLabyrinthe(5, 3, 5);
 			this.liste_monstre.add(m);
 	}
 
