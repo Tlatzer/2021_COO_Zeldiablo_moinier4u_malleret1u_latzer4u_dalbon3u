@@ -5,7 +5,7 @@ package jeuPerso;
  * Classe modelisant un monstre
  *
  */
-public class Monstre {
+public abstract class Monstre {
 
 /**
  * Nombre de points de vie d'un monstre
