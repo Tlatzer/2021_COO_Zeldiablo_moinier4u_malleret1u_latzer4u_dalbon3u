@@ -1,0 +1,75 @@
+@startuml
+title Modification Monstre et Troll
+class Labyrinthe{
+  -labyrinthe:int[][]
+  +Labyrinthe()
++Labyrinthe(String lvl)
+  +getEmplacement(int x,int y):int
+  +getLabyrinthe():int[][]
+  +getTaille():int
+  +teleportation(Personnage p)
+  +setLabyrinthe(int x, int y, int num)
+}
+
+class Troll{
++Troll()
++attaquer(Personnage pers)
++regeneration()
+}
+
+class Fantome{
+
+}
+
+class JeuPerso{
+  -pj:Personnage
+-liste_monstre : ArrayList<Monstre>
+-labyrinthe : Labyrinthe
+-dep : int
+  +JeuPerso()
++JeuPerso(String lvl)
+  +toString()
+  +evoluer(Commande commande)
+  +etreFini()
+  +getPj()
+  +getLabyrinthe()
++getListeMonstre()
+}
+
+
+abstract class Monstre {
+-pv:int
+-degats:int
+-x:int
+-y:int
++Monstre(int abs, int ord)
++deplacerProcheHero(Labyrinthe lab, Personnage pj)
++deplacerAleatoire(Labyrinthe lab)
++attaquer(Personnage pers)
++getDegats()
++getPv()
++toString()
++getX()
++getY()
+}
+
+class Personnage{
+  +x:int
+  +y:int
+  +LIMIT_X:int
+  +LIMIT_Y:int
+  +Personnage()
++Personnage(String lvl)
+  +deplacer(Commande c, Labyrinthe l)
+  +toString()
+  +degatCase()
+}
+
+
+
+JeuPerso "1" --> "*" Monstre:-liste_monstre
+JeuPerso "1" --> "1" Labyrinthe : -lab
+JeuPerso "1" --> "0..1" Personnage : -pj
+Monstre <|..Troll
+Monstre <|.. Fantome
+@enduml 
