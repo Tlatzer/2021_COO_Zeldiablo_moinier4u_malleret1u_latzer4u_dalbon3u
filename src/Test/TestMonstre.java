@@ -90,4 +90,21 @@ public class TestMonstre {
 		
 		
 	}
+	
+	@Test
+	public void testAttaquer() {
+		Personnage pers = new Personnage();
+		Monstre m =  new Troll(6,7);
+		JeuPerso jeu = new JeuPerso();
+		
+		int res = m.attaquer(pers);
+		
+		assertEquals("Le personnage devrait avoir 80 pv", 80, res);
+		
+		
+		
+	}
+	
+	
+	
 }
