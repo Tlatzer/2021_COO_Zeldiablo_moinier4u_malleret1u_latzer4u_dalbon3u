@@ -37,7 +37,6 @@ class Personnage{
 }
 
 class DessinPerso{
-  -image:Image
   -TAILLE_CASE:int
   +DessinPerso(JeuPerso j)
   +dessinerObjet(String s, int x, int y, BufferedImage im)
@@ -50,7 +49,7 @@ class Monstre{
   -x:int
   -y:int
   +Monstre(int abs, int ord)
-  +attaquer(Personnage pers)
+  +attaquer(Personnage pers):int 
   +deplacerAleatoire(Labyrinthe lab)
   +deplacerProcheHero()
   +toString():String
@@ -60,6 +59,13 @@ class Monstre{
   +getY():int
 }
 
+class Troll{
+  +Troll()
+  +attaquer(Personnage p):int
+  +regeneration()
+}
+
+Monstre "1" <|-- "1" Troll
 DessinPerso "1" --> "1" JeuPerso : -jeu
 JeuPerso "1" --> "0..1" Personnage : -pj
 JeuPerso "1" --> "*" Monstre : -liste_monstre
