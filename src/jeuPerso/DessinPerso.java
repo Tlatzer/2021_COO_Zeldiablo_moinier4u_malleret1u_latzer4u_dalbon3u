@@ -54,6 +54,10 @@ public class DessinPerso implements DessinJeu {
 			crayon.fillOval(x * TAILLE_CASE, y * TAILLE_CASE, TAILLE_CASE,
 			TAILLE_CASE);
 			break;
+		case "SOL":
+			image = new ImageIcon(getClass().getResource("/Image/sol.jpg")).getImage();
+			crayon.drawImage(image, x*TAILLE_CASE , y*TAILLE_CASE , null);
+			break;
 		case "MUR":
 			image = new ImageIcon(getClass().getResource("/Image/murs.jpg")).getImage();
 			crayon.drawImage(image, x*TAILLE_CASE , y*TAILLE_CASE , null);
@@ -83,6 +87,9 @@ public class DessinPerso implements DessinJeu {
 		for (int i=0;i<jeu.getLabyrinthe().getTaille();i++) {
 
 			for (int j=0;j<jeu.getLabyrinthe().getTaille();j++) {
+				if (jeu.getLabyrinthe().getEmplacement(i,j)==0 ) {
+					this.dessinerObjet("SOL", i, j, im);
+				}
 
 				if (jeu.getLabyrinthe().getEmplacement(i,j)==1 ) {
 					this.dessinerObjet("MUR", i, j, im);
