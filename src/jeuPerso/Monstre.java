@@ -5,7 +5,7 @@ package jeuPerso;
  * Classe modelisant un monstre
  *
  */
-public abstract class Monstre {
+public abstract class  Monstre {
 
 /**
  * Nombre de points de vie d'un monstre
@@ -30,20 +30,13 @@ public abstract class Monstre {
 /**
  * Construction d'un monstre
  */
-	public Monstre(int abs, int ord) {
-		this.pv = 10;
+	public Monstre(int abs, int ord, int pv2) {
+		this.setPv(pv2);
 		this.degats = 2;
 		this.x = abs;
 		this.y = ord;
 	}
 
-	
-	/**
-	 * Méthode qui enlève des points de vie au Personnage
-	 * @param pers
-	 */
-	public abstract void attaquer(Personnage pers);
-	
 
 	/**
  	 * Methode qui permet au Monstre de se deplacer aleatoirement dans le labyrinthe
@@ -72,6 +65,10 @@ public abstract class Monstre {
 			}
 	}
 
+	
+	public abstract void attaquer(Personnage pers);
+	
+	
 
 	/**
  	 * Methode qui permet au Monstre de se rapprocher du Joueur
@@ -115,7 +112,7 @@ public abstract class Monstre {
  * @return le nombre de pv et de degats dans un String
  */
 	public String toString() {
-		return("Points de vie "+this.pv+" Degats: "+this.degats);
+		return("Points de vie "+this.getPv()+" Degats: "+this.degats);
 	}
 /**
  * Getter de pv
@@ -146,6 +143,11 @@ public abstract class Monstre {
  */
 	public int getY() {
 		return this.y;
+	}
+	
+
+	protected void setPv(int pv) {
+		this.pv = pv;
 	}
 
 
