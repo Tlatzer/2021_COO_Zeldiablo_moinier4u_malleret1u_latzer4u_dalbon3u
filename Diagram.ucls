@@ -5,7 +5,7 @@
     project="2021_COO_Zeldiablo_moinier4u_malleret1u_latzer4u_dalbon3u" 
     file="/2021_COO_Zeldiablo_moinier4u_malleret1u_latzer4u_dalbon3u/src/jeuPerso/Personnage.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="949" y="131"/>    
+    <position height="-1" width="-1" x="925" y="180"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -16,7 +16,7 @@
     project="2021_COO_Zeldiablo_moinier4u_malleret1u_latzer4u_dalbon3u" 
     file="/2021_COO_Zeldiablo_moinier4u_malleret1u_latzer4u_dalbon3u/src/jeuPerso/JeuPerso.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="648" y="327"/>    
+    <position height="-1" width="-1" x="588" y="374"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -27,7 +27,7 @@
     project="2021_COO_Zeldiablo_moinier4u_malleret1u_latzer4u_dalbon3u" 
     file="/2021_COO_Zeldiablo_moinier4u_malleret1u_latzer4u_dalbon3u/src/jeuPerso/DessinPerso.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="625" y="89"/>    
+    <position height="-1" width="-1" x="583" y="127"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -38,7 +38,7 @@
     project="2021_COO_Zeldiablo_moinier4u_malleret1u_latzer4u_dalbon3u" 
     file="/2021_COO_Zeldiablo_moinier4u_malleret1u_latzer4u_dalbon3u/src/jeuPerso/Labyrinthe.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="970" y="432"/>    
+    <position height="-1" width="-1" x="948" y="462"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -49,55 +49,74 @@
     project="2021_COO_Zeldiablo_moinier4u_malleret1u_latzer4u_dalbon3u" 
     file="/2021_COO_Zeldiablo_moinier4u_malleret1u_latzer4u_dalbon3u/src/jeuPerso/Monstre.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="221" y="168"/>    
+    <position height="-1" width="-1" x="202" y="238"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <association id="6">    
+  <class id="6" language="java" name="jeuPerso.Troll" 
+    project="2021_COO_Zeldiablo_moinier4u_malleret1u_latzer4u_dalbon3u" 
+    file="/2021_COO_Zeldiablo_moinier4u_malleret1u_latzer4u_dalbon3u/src/jeuPerso/Troll.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="205" y="537"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="7">    
     <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="7" name="labyrinthe">        
-        <position height="0" width="0" x="177" y="-7"/>      
+      <attribute id="8" name="pj">        
+        <position height="0" width="0" x="141" y="-5"/>      
       </attribute>      
-      <multiplicity id="8" minimum="0" maximum="1">        
-        <position height="0" width="0" x="177" y="-7"/>      
+      <multiplicity id="9" minimum="0" maximum="1">        
+        <position height="0" width="0" x="141" y="-5"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="10">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="5"/>  
+  </generalization>  
+  <association id="11">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="12" name="liste_monstre">        
+        <position height="0" width="0" x="-19" y="70"/>      
+      </attribute>      
+      <multiplicity id="13" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="-19" y="70"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="14">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="15" name="labyrinthe">        
+        <position height="0" width="0" x="155" y="23"/>      
+      </attribute>      
+      <multiplicity id="16" minimum="0" maximum="1">        
+        <position height="0" width="0" x="155" y="23"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="9">    
+  <association id="17">    
     <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="10" name="jeu">        
-        <position height="0" width="0" x="242" y="-37"/>      
+      <attribute id="18" name="jeu">        
+        <position height="0" width="0" x="182" y="10"/>      
       </attribute>      
-      <multiplicity id="11" minimum="0" maximum="1">        
-        <position height="0" width="0" x="242" y="-37"/>      
+      <multiplicity id="19" minimum="0" maximum="1">        
+        <position height="0" width="0" x="182" y="10"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="12">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="13" name="liste_monstre"/>      
-      <multiplicity id="14" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="5" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="15">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="16" name="pj">        
-        <position height="0" width="0" x="165" y="-54"/>      
-      </attribute>      
-      <multiplicity id="17" minimum="0" maximum="1">        
-        <position height="0" width="0" x="165" y="-54"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
