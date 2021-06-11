@@ -72,9 +72,6 @@ public abstract class  Monstre {
 				break;
 			}
 	}
-
-	
-	public abstract void attaquer(Personnage pers);
 	
 	
 
