@@ -164,16 +164,9 @@ public Cell getCell(int x, int y) {
 
 }
 
-
-
-
-
-
-
-
-
-
-// draw the maze
+/**
+ * créer le tableau en lui meme 
+ */
 public void updateGrid() {
 	
 	// fill background
